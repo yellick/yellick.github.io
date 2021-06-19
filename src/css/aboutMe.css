@@ -1,0 +1,28 @@
+.about-me {
+    box-shadow: 0 -10px 10px 5px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.about-me-content {
+    padding: 5.5%;
+    width: 42%;
+    margin: auto;
+}
+
+.about-me-photo {
+    margin: 0 0 1% 0;
+}
+
+.about-me-content p{
+    color: #3f495a;
+    margin-bottom: 10%;
+    font-size: 17px;
+}
+
+.download-btn {
+    color: #6f707e;
+    border: solid 2px #6f707e;
+    border-radius: 5px;
+    width: 40%;
+    padding: 5px;
+}

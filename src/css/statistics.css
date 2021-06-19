@@ -1,0 +1,26 @@
+.statistics {
+    text-align: center;
+    padding: 5.5%;
+    background: url(../bg/statistics.jpg) center/cover no-repeat;
+}
+
+.statistic h2{
+    font-size: 33px;
+    color: #263244;
+    font-weight: 800;
+    margin: 0 0 20% 0;
+}
+
+.statistic h3 {
+    color: #404b5b;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.statistic-block {
+    margin: 0 4.5% 0 4.5%;
+}
+
+.statistic-block img {
+    margin: 0 0 20% 0;
+}

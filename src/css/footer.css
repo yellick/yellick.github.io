@@ -1,0 +1,80 @@
+.footer {
+    margin: 1.5% 0 0 0;
+    padding: 5.5%;
+    text-align: center;
+    background: url(../bg/footer.jpg) center/cover no-repeat;
+    color: #fff;
+}
+
+.footer-content h2 {
+    font-size: 33px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 2% 0 2% 0;
+}
+
+.underline-footer {
+    margin: 1.5% 0 1.5% 0;
+}
+
+.footer-content p {
+    font-size: 16.7px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.contact-block {
+    width: 15%;
+    margin: 3% 2.6% 0 2.6%;
+}
+
+.contacts img {
+    margin: 0 0 5% 0;
+}
+
+.input-message {
+    margin: auto;
+    width: 37%;
+}
+
+.entry-field {
+    width: 48%;
+    height: 34px;
+    margin-bottom: 2%;
+}
+
+.message {
+    width: 100%;
+}
+
+.sender-name {
+    float: left;
+}
+
+.sender-mail {
+    float: right;
+}
+
+.send-message {
+    width: 125px;
+    height: 46px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    background: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 2% 0 20% 0;
+}
+
+.social-networks img{
+    margin: 0 1.6% 0 1.6%;
+}

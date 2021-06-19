@@ -1,0 +1,56 @@
+.title {
+    color: #fff;
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 20%; /* ~388px на макете */
+    float: left;
+}
+
+.menu {
+    float: left;
+    padding-left: 23%; /* ~432px на макете */
+}
+
+.menu-item {
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    margin-right: 2%; /* ~40px на макете */
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.main-page {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../bg/bg_main.jpg) center/cover no-repeat;
+}
+
+.main-container {
+    float: left;
+    margin: 15% 0 0 21%; /* ~432px 0 0 ~404px на макете */
+    color: #2c384a;
+    text-align: center;
+}
+
+.main-container h1{
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+
+.main-container h3{
+    color: #79818d;
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+.main-container input{
+    color: #6e7783;
+    border: solid 2px #6e7783;
+    border-radius: 5px;
+    margin: 7% 2% 2% 0;
+    padding: 1.5%; /* ~15px на макете */
+    text-align: center;
+    background: none;
+}

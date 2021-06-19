@@ -1,0 +1,37 @@
+.reviews {
+    text-align: center;
+    background-color: #fff;
+    padding: 5.5%;
+}
+
+.reviews-content {
+    width: 40%;
+    margin: auto;
+}
+
+.review {
+    font-size: 16px;
+    font-weight: 400;
+    color: #243042;
+    margin: 5% 0 0 0;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #243042;
+}
+
+.position {
+    font-size: 16px;
+    font-weight: 400;
+    color: #243042;
+}
+
+.whose review {
+    margin: 5% 0 0 0;
+}
+
+.dots {
+    margin: 5% 0 0 0;
+}
