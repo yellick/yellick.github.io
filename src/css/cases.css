@@ -1,20 +1,26 @@
 .cases {
     background-color: #fcfdfd;
     text-align: center;
+    padding: 5.5%;
 }
 
 .cases-content {
-    padding: 5.5%;
 }
 
 .cases-content > p {
     font-size: 16px;
     font-weight: 400;
     color: #3f495a;
+    margin-bottom: 2%;
+}
+
+.case {
+    width: 60%;
+    margin: auto;
 }
 
 .case-img {
-    width: 60%;
+    width: 100%;
 }
 
 .cases-client {
@@ -22,10 +28,11 @@
 }
 
 .about-client {
-    width: 15%;
-    margin-right: 4.5%;
+    width: 30%;
+    margin: 0 5% 0 0;
     color: #384354;
     text-align: left;
+    float: left;
 }
 
 .about-client h3 {
@@ -53,7 +60,7 @@
 }
 
 .about-project {
-    width: 44%;
+    width: 65%;
     text-align: left;
 }
 

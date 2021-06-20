@@ -13,6 +13,7 @@
 }
 
 .menu {
+    width: 60%;
     float: left;
     padding-left: 23%; /* ~432px на макете */
 }

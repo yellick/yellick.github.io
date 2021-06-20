@@ -1,7 +1,12 @@
 .statistics {
     text-align: center;
-    padding: 5.5%;
+    padding: 5.5% 10% 5.5% 10%;
     background: url(../bg/statistics.jpg) center/cover no-repeat;
+    height: 65%;
+}
+
+.statistic {
+    margin: auto;
 }
 
 .statistic h2{
@@ -19,8 +24,11 @@
 
 .statistic-block {
     margin: 0 4.5% 0 4.5%;
+    width: 15%;
+    height: 300px;
+    float: left;
 }
 
 .statistic-block img {
-    margin: 0 0 20% 0;
+    margin: 0 0 20px 0;
 }

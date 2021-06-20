@@ -1,17 +1,22 @@
 .capabilities {
     background: url(../bg/bg_capabilities.jpg) center/cover no-repeat;
     text-align: center;
+    height: 71%;
 }
 
 .capabilities-content {
     padding: 5.5%;
 }
 
+.cpabilities-options {
+    margin: auto;
+}
+
 .capabilities-content-block {
+    margin: 0 4.5% 0 4.5%;
     width: 15%;
-    height: 7.5%;
-    display: inline-block;
-    margin: 0 2.5% 0 2.5%;
+    height: 300px;
+    float: left;
 }
 
 .capabilities-title {
@@ -30,5 +35,4 @@
 
 .capabilities-ico {
     margin: 0 0 50px 0;
-    position: static;
 }
