@@ -1,20 +1,22 @@
 .main-page {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../bg/bg_main.jpg) center/cover no-repeat;
 }
 
 .main-container {
     float: left;
-    margin: 15% 0 0 21%; /* ~432px 0 0 ~404px на макете */
+    margin: 20% 0 0 21%;
     color: #2c384a;
     text-align: center;
+    -webkit-animation: titleMove 1s;
+    -o-animation: titleMove 1s;
+    animation: titleMove 1s;
 }
 
 .main-container h1{
     font-size: 60px;
     font-weight: bold;
-    
 }
 
 .main-container h3{
@@ -24,11 +26,29 @@
 }
 
 .main-container input{
-    color: #6e7783;
-    border: solid 2px #6e7783;
+    color: #2c384a;
+    border: solid 2px #2c384a;
     border-radius: 5px;
     margin: 7% 2% 2% 0;
     padding: 1.5%; /* ~15px на макете */
     text-align: center;
     background: none;
+    transition: all 0.3s;
+}
+
+.main-container input:hover {
+    background-color: #2c384a;
+    color: #fff;
+}
+
+@keyframes titleMove{
+    0% {
+        opacity: 0;
+        margin-top: 25%;
+    }
+    
+    100% {
+        opacity: 1;
+        margin-top: 20%;
+    }
 }

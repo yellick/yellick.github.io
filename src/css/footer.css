@@ -75,6 +75,11 @@
     font-weight: 500;
     color: #ffffff;
     margin: 2% 0 20% 0;
+    transition: all 0.3s;
+}
+
+.send-message:hover {
+    background-color: rgba(14, 24, 40, .5);
 }
 
 .social-networks img{
