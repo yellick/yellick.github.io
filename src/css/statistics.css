@@ -3,6 +3,7 @@
     padding: 5.5% 10% 5.5% 10%;
     background: url(../bg/statistics.jpg) center/cover no-repeat;
     height: 65%;
+    background-attachment: fixed;
 }
 
 .statistic {
