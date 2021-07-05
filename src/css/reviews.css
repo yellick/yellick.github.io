@@ -2,6 +2,7 @@
     text-align: center;
     background-color: #fff;
     padding: 5.5%;
+    display: flex;
 }
 
 .reviews-content {
@@ -33,5 +34,27 @@
 }
 
 .dots {
-    margin: 5% 0 0 0;
+    width: 20%;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    .review {
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #243042;
+    }
+
+    .position {
+        font-size: 20px;
+        font-weight: 400;
+        color: #243042;
+    }
 }

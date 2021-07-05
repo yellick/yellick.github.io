@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Андрей Браун, веб-разработчик</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
@@ -32,6 +34,7 @@
             <div class="title">
                 <p>Андрей Браун</p>
             </div>
+
             <div class="menu">
                 <a href="#">
                     <div class='menu-item'>
@@ -64,6 +67,18 @@
                     </div>
                 </a>
             </div>
+
+            <!--<div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>-->
         </nav>
     </header>
 
@@ -74,6 +89,11 @@
                 <h3>Фулл стек веб - разработчик и Android - разработчик</h3>
                 <input type="button" value='Обо мне' class='btn-active'>
                 <input type="button" value='Мои работы' class='btn-active'>
+                <div class="arrows-down">
+                    <i class="fa fa-angle-down arrow-down-1" aria-hidden="true"></i>
+                    <i class="fa fa-angle-down arrow-down-2" aria-hidden="true"></i>
+                    <i class="fa fa-angle-down arrow-down-3" aria-hidden="true"></i>
+                </div>
             </div>
         </section>
 
@@ -85,11 +105,16 @@
                     <img src="img/fotka_103.jpg" alt="парень">
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quis voluptatum labore, odio est ad numquam molestiae fugiat perspiciatis atque aut quibusdam magnam id accusamus alias neque ullam laudantium. Magni.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe veniam est provident dolorem sapiente itaque, voluptas pariatur, quo unde neque distinctio autem ducimus facilis voluptatum quaerat eius rerum exercitationem quod.</p>
+                <p class='PC-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quis voluptatum labore, odio est ad numquam molestiae fugiat perspiciatis atque aut quibusdam magnam id accusamus alias neque ullam laudantium. Magni.</p>
+                <p class='PC-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe veniam est provident dolorem sapiente itaque, voluptas pariatur, quo unde neque distinctio autem ducimus facilis voluptatum quaerat eius rerum exercitationem quod.</p>
+
+                <p class='phone-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe veniam est provident dolorem sapiente itaque, voluptas pariatur, quo unde neque distinctio autem ducimus facilis voluptatum quaerat eius rerum exercitationem quod.</p>
+
+
+
 
                 <button class="download-btn btn-active">
-                    <img src="ico/download_ico.png" alt="">
+                    <i class="fa fa-download" aria-hidden="true"></i>
                     <span>Скачать резюме</span>
                 </button>
             </div>
@@ -124,6 +149,36 @@
                         <p class='capabilities-p'>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
                     </div>
                 </div>
+
+                <div class="capabilities-phone">
+                    <div class="capabilities-block">
+                        <div class="capabilities-block-phone inline-block">
+                            <img src="ico/notebook.png" alt="" class='capabilities-ico-phone'>
+                            <h2 class='capabilities-title'>Веб-Дизайн</h2>
+                            <p class='capabilities-p'>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+                        </div>
+
+                        <div class="capabilities-block-phone inline-block">
+                            <img src="ico/end_tag.png" alt="" class='capabilities-ico-phone'>
+                            <h2 class='capabilities-title'>Разработка</h2>
+                            <p class='capabilities-p'>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+                        </div>
+                    </div>
+
+                    <div class="capabilities-block">
+                        <div class="capabilities-block-phone inline-block">
+                            <img src="ico/rocket.png" alt="" class='capabilities-ico-phone'>
+                            <h2 class='capabilities-title'>CEO-Оптимизация</h2>
+                            <p class='capabilities-p'>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+                        </div>
+
+                        <div class="capabilities-block-phone inline-block">
+                            <img src="ico/megaphone.png" alt="" class='capabilities-ico-phone'>
+                            <h2 class='capabilities-title'>Маркетинг</h2>
+                            <p class='capabilities-p'>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -142,16 +197,32 @@
                             <p>Какая-то компания</p>
                             <h3>WEBSITE:</h3>
                             <p>http://www.somedomain.com</p>
-                            <!--target='_blank'-->
                             <form href="#"><button class='btn-visit-site btn-active'>VISIT LIVE SITE</button></form>
                         </div>
 
                         <div class="about-project inline-block">
                             <h4>Название проекта</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
                         </div>
                     </div>
+                </div>
+
+                <div class="case-phone">
+                    <img src="img/case.jpg" alt="кейс" class='case-img-phone'>
+
+
+                    <div class="about-client-phone">
+                        <div class="client inline-block">
+                            <h3>Client:</h3>
+                            <p>Какая-то компания</p>
+                        </div>
+                        <div class="website inline-block">
+                            <h3>WEBSITE:</h3>
+                            <p>http://www.somedomain.com</p>
+                        </div>
+                    </div>
+                    <form href="#"><button class='btn-visit-site-phone btn-active'>VISIT LIVE SITE</button></form>
+
                 </div>
 
             </div>
@@ -226,6 +297,36 @@
                         <h3>Награды получено</h3>
                     </div>
                 </div>
+
+                <div class="statistic-phone">
+                    <div class="statistic-phone-block">
+                        <div class="statistic-block-phone">
+                            <img src="ico/smail.png" alt="смайл">
+                            <h2>120</h2>
+                            <h3>Счастливых клиентов</h3>
+                        </div>
+
+                        <div class="statistic-block-phone">
+                            <img src="ico/end_tag_orange.png" alt="тег">
+                            <h2>4.600</h2>
+                            <h3>Часов работы</h3>
+                        </div>
+                    </div>
+
+                    <div class="statistic-phone-block">
+                        <div class="statistic-block-phone">
+                            <img src="ico/check_mark.png" alt="галочка">
+                            <h2>340</h2>
+                            <h3>Выполненных проектов</h3>
+                        </div>
+
+                        <div class="statistic-block-phone">
+                            <img src="ico/trophy.png" alt="кубок">
+                            <h2>23</h2>
+                            <h3>Награды получено</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -250,38 +351,55 @@
 
         <footer class='footer'>
             <div class="footer-content">
-                <h2>Мои контакты</h2>
-                <img src="ico/underline.png" alt="" class='underline-footer'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</p>
+                <div class="footer-PC">
+                    <h2>Мои контакты</h2>
+                    <img src="ico/underline.png" alt="" class='underline-footer'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</p>
 
-                <div class="contacts">
-                    <div class="contact-block inline-block">
-                        <img src="ico/marker.png" alt="">
-                        <p>Санкт-Петербург<br>Невский проспект 11</p>
+                    <div class="contacts">
+                        <div class="contact-block inline-block">
+                            <img src="ico/marker.png" alt="">
+                            <p>Санкт-Петербург<br>Невский проспект 11</p>
+                        </div>
+
+                        <div class="contact-block inline-block">
+                            <img src="ico/letter.png" alt="">
+                            <p>info@companyname.com</p>
+                        </div>
+
+                        <div class="contact-block inline-block">
+                            <img src="ico/telephone.png" alt="">
+                            <p>+7 999 999-99-99</p>
+                        </div>
                     </div>
 
-                    <div class="contact-block inline-block">
-                        <img src="ico/letter.png" alt="">
-                        <p>info@companyname.com</p>
-                    </div>
+                    <h3>Оставьте мне сообщение</h3>
 
-                    <div class="contact-block inline-block">
-                        <img src="ico/telephone.png" alt="">
-                        <p>+7 999 999-99-99</p>
+                    <div class="input-message">
+                        <form action="#">
+                            <div class="name-mail">
+                                <input type="text" placeholder="Имя" class='entry-field sender-name'>
+                                <input type="text" placeholder="email" class='entry-field sender-mail'>
+                            </div>
+                            <textarea cols="30" rows="5" placeholder="Сообщение" class='message'></textarea>
+                            <input type="button" value='Отправить' class='send-message btn-active'>
+                        </form>
                     </div>
                 </div>
 
-                <h3>Оставьте мне сообщение</h3>
+                <div class="footer-phone">
+                    <h3>Оставьте мне сообщение</h3>
 
-                <div class="input-message">
-                    <form action="#">
-                        <div class="name-mail">
-                            <input type="text" placeholder="Имя" class='entry-field sender-name'>
-                            <input type="text" placeholder="email" class='entry-field sender-mail'>
-                        </div>
-                        <textarea cols="30" rows="5" placeholder="Сообщение" class='message'></textarea>
-                        <input type="button" value='Отправить' class='send-message btn-active'>
-                    </form>
+                    <div class="input-message">
+                        <form action="#">
+                            <div class="name-mail">
+                                <input type="text" placeholder="Имя" class='entry-field sender-name'>
+                                <input type="text" placeholder="email" class='entry-field sender-mail'>
+                            </div>
+                            <textarea cols="30" rows="5" placeholder="Сообщение" class='message'></textarea>
+                            <input type="button" value='Отправить' class='send-message btn-active'>
+                        </form>
+                    </div>
                 </div>
                 <!--
             <div class="social-networks">
@@ -298,6 +416,22 @@
     </main>
 
     <script src='js/preloader.js'></script>
+    <script src='js/bootstrap.bundle.min.js'></script>
+
+    <!-- 
+    Отче наш, Иже еси на небесех!
+    Да святится имя Твое,
+    да приидет Царствие Твое,
+    да будет воля Твоя,
+    яко на небеси и на земли.
+    Хлеб наш насущный даждь нам днесь;
+    и остави нам долги наша,
+    якоже и мы оставляем должником нашим;
+    и не введи нас во искушение тем что получается,
+    но избави нас от ошибок лукавых.
+    Ибо Твое есть Царство и сила и слава во веки.
+    Аминь. 
+-->
 
 </body>
 

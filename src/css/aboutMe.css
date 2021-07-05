@@ -1,16 +1,18 @@
 .about-me {
     box-shadow: 0 -10px 10px 5px rgba(0,0,0,0.3);
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .about-me-content {
-    padding: 5.5%;
+    padding: 10% 0 10% 0;
     width: 42%;
     margin: auto;
 }
 
 .about-me-photo {
-    margin: 0 0 1% 0;
+    margin: 10% 0 10% 0;
 }
 
 .about-me-content p{
@@ -31,4 +33,24 @@
 .download-btn:hover {
     color: #fff;
     background-color: #2c384a;
+}
+
+/*адаптив*/
+
+.phone-text {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .PC-text {
+        display: none;
+    }
+    .phone-text {
+        display: inherit;
+    }
+    .download-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+    }
 }

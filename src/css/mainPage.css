@@ -1,4 +1,5 @@
 .main-page {
+    font-family: 'F-G', sans-serif;
     width: 100%;
     height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../bg/bg_main.jpg) center/cover no-repeat;
@@ -14,26 +15,49 @@
     animation: titleMove 1s;
 }
 
-.main-container h1{
+.main-container h1 {
     font-size: 60px;
     font-weight: bold;
 }
 
-.main-container h3{
+.main-container h3 {
     color: #79818d;
     font-size: 20px;
     margin-top: 4%;
 }
 
-.main-container input{
+.main-container input {
     color: #2c384a;
     border: solid 2px #2c384a;
     border-radius: 5px;
     margin: 7% 2% 2% 0;
-    padding: 1.5%; /* ~15px на макете */
+    padding: 1.5%;
+    /* ~15px на макете */
     text-align: center;
     background: none;
     transition: all 0.3s;
+    font-size: 14px;
+}
+
+.arrows-down {
+    margin-top: 50px;
+    height: 50%;
+    display: none;
+}
+
+.arrow-down-1 {
+    font-size: 50px;
+    width: 100%;
+}
+
+.arrow-down-2 {
+    font-size: 70px;
+    width: 100%;
+}
+
+.arrow-down-3 {
+    font-size: 90px;
+    width: 100%;
 }
 
 .main-container input:hover {
@@ -41,14 +65,48 @@
     color: #fff;
 }
 
-@keyframes titleMove{
+@keyframes titleMove {
     0% {
         opacity: 0;
         margin-top: 25%;
     }
-    
+
     100% {
         opacity: 1;
         margin-top: 20%;
     }
 }
+
+
+/*адаптив*/
+
+@media (max-width: 800px) {
+    .main-page {
+        background: url(../bg/bg_main.jpg) center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        background-attachment: fixed;
+    }
+
+    .main-container {
+        height: 20%;
+        margin: 40% 0 40% 0;
+    }
+
+    .main-container input {
+        width: 45%;
+        height: 40%;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .arrows-down {
+        display: inherit;
+    }
+}
+
+/*
+@media (max-width: 576px) {
+    
+}
+*/

@@ -82,6 +82,41 @@
     background-color: rgba(14, 24, 40, .5);
 }
 
-.social-networks img{
+.social-networks img {
     margin: 0 1.6% 0 1.6%;
+}
+
+
+.footer-phone {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .footer-PC {
+        display: none;
+    }
+
+    .footer-phone {
+        display: inherit;
+    }
+    
+    .footer-phone h3 {
+        font-size: 22px;
+    }
+
+    .input-message {
+        margin: auto;
+        width: 80%;
+        font-size: 16px;
+    }
+    
+    .entry-field {
+        height: 50px;
+        margin-bottom: 5%;
+    }
+    
+    .message {
+        height: 100px;
+        margin-bottom: 5%;
+    }
 }

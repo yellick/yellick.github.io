@@ -51,3 +51,28 @@
 .price span{
     float: right;
 }
+
+/*адаптив*/
+
+@media (max-width: 800px) {
+    .type-site {
+        margin: 20px 0 20px 0;
+    }
+    
+    .design {
+        margin: 20px 0 20px 0;
+    }
+    
+    .adaptability {
+        margin: 20px 0 20px 0;
+    }
+    
+    .price {
+        margin-bottom: 30px;
+    }
+    
+    .cost-calculation-payment > div > select {
+        height: 50px;
+        font-size: 20px;
+    }
+}

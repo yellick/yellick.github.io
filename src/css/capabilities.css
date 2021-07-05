@@ -1,7 +1,8 @@
 .capabilities {
     background: url(../bg/bg_capabilities.jpg) center/cover no-repeat;
     text-align: center;
-    height: 71%;
+    display: flex;
+    justify-content: center;
 }
 
 .capabilities-content {
@@ -10,6 +11,8 @@
 
 .cpabilities-options {
     margin: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .capabilities-content-block {
@@ -35,4 +38,33 @@
 
 .capabilities-ico {
     margin: 0 0 50px 0;
+}
+
+/*адаптив*/
+
+.capabilities-phone {
+    display: none;
+}
+
+.capabilities-block {
+    width: 100%;
+}
+
+.capabilities-block-phone {
+    width: 50%;
+    margin: 10px 0 10px 0;
+}
+
+.capabilities-ico-phone {
+    margin: 5% 0 5% 0;
+}
+
+@media (max-width: 800px) {
+    .cpabilities-options {
+        display: none;
+    }
+    
+    .capabilities-phone {
+        display: inherit;
+    }
 }
