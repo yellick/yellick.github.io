@@ -86,6 +86,12 @@ textarea {
     font-family: "calibri", sans-serif;
 }
 
+@media (max-width: 768px) {
+    .title-h2 {
+        font-size: 28px;
+    }
+}
+
 
 /* -------------------------------------------------*/
 /* header */
@@ -344,6 +350,7 @@ textarea {
     border: solid 2px #2c384a;
     border-radius: 5px;
     width: 40%;
+    height: auto;
     padding: 5px;
     transition: all 0.3s;
 }
@@ -643,6 +650,16 @@ textarea {
 
 .price span {
     float: right;
+}
+
+@media (max-width: 768px) {
+    .cost-calculation h2 {
+        font-size: 38px;
+    }
+    
+    .cost-calculation h3 {
+        font-size: 24px;
+    }
 }
 
 /*-------------------------------------------------*/
