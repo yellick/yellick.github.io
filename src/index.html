@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Андрей Браун, веб-разработчик</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
@@ -22,48 +22,73 @@
     <header class='header franklin-gothic'>
         <div class="container">
             <nav class='row'>
-                <div class="title 
-                   col-xxl-2 col-xl-2 col-lg-3 col-md-8 col-sm-8 col-8
-                   ">
-                    <p>Андрей Браун</p>
-                </div>
 
-                <div class="menu 
+
+                <a href="#main-page" class=' 
+                   col-xxl-2 col-xl-2 col-lg-3 col-md-8 col-sm-8 col-8'>
+                    <div class="title">
+                        <p>Андрей Браун</p>
+                    </div>
+                </a>
+
+                <ul class="menu 
                    col-xxl-6 col-xl-7 col-lg-9
                    offset-xxl-4 offset-xl-3 offset-lg-0
                    d-none d-lg-flex
                    ">
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Обо мне</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Услуги</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Кейсы</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Прайс</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Отзывы</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class='menu-item'>
-                            <p>Контакты</p>
-                        </div>
-                    </a>
-                </div>
+                    <li class='non-existent'>
+                        <a href="#main-page">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#about-me">
+                            <div class='menu-item'>
+                                <p>Обо мне</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#capabilities">
+                            <div class='menu-item'>
+                                <p>Услуги</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#cases">
+                            <div class='menu-item'>
+                                <p>Кейсы</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#cost-calculation">
+                            <div class='menu-item'>
+                                <p>Прайс</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class='non-existent'>
+                        <a href="#main-page">
+                            <div></div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#reviews">
+                            <div class='menu-item'>
+                                <p>Отзывы</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class='list-item'>
+                        <a href="#footer">
+                            <div class='menu-item'>
+                                <p>Контакты</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
 
                 <div class="
                    col-md-2 col-sm-2 col-2
@@ -77,32 +102,32 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#about-me">
                                     <div class='menu-item-phone'>
                                         <p>Обо мне</p>
                                     </div>
                                 </a></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#capabilities">
                                     <div class='menu-item-phone'>
                                         <p>Услуги</p>
                                     </div>
                                 </a></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#cases">
                                     <div class='menu-item-phone'>
                                         <p>Кейсы</p>
                                     </div>
                                 </a></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#cost-calculation">
                                     <div class='menu-item-phone'>
                                         <p>Прайс</p>
                                     </div>
                                 </a></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#reviews">
                                     <div class='menu-item-phone'>
                                         <p>Отзывы</p>
                                     </div>
                                 </a></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li><a class="dropdown-item" href="#footer">
                                     <div class='menu-item-phone'>
                                         <p>Контакты</p>
                                     </div>
@@ -111,17 +136,34 @@
                     </div>
                 </div>
             </nav>
+
         </div>
     </header>
 
     <main>
-        <section class='main-page franklin-gothic'>
+
+        <section class='main-page franklin-gothic section' id='main-page'>
             <div class="container">
                 <div class="mainPage-content">
                     <h1>Привет<br> Я Андрей Браун</h1>
                     <h3>Фулл стек веб - разработчик и Android - разработчик</h3>
-                    <input type="button" value='Обо мне' class='btn-active'>
-                    <input type="button" value='Мои работы' class='btn-active'>
+                    <!-- <input type="button" value='Обо мне' class='btn-active'>
+                    <input type="button" value='Мои работы' class='btn-active'> -->
+
+                    <div class="main-page-btn d-flex justify-content-around">
+                        <a href="#about-me" class='inline-block'>
+                            <div class="btn-active">
+                                <p>Обо мне</p>
+                            </div>
+                        </a>
+
+                        <a href="#cases" class='inline-block'>
+                            <div class="btn-active">
+                                <p>Мои работы</p>
+                            </div>
+                        </a>
+
+                    </div>
 
                     <div class="arrow-down d-lg-none">
                         <i class="fa fa-chevron-down fs-3 arrow-1" aria-hidden="true"></i>
@@ -132,12 +174,12 @@
             </div>
         </section>
 
-        <section class="about-me">
+        <section class="about-me section" id='about-me'>
             <div class="about-me-content">
                 <h2 class='title-h2'>Обо мне</h2>
                 <img src="ico/underline.png" alt="" class='underline'>
                 <div class="about-me-photo">
-                    <img src="img/fotka_103.jpg" alt="парень">
+                    <img class='el-anim' src='img/white.png' data-src="img/fotka_103.jpg" alt="">
                 </div>
 
                 <div class="about-me-pc">
@@ -156,7 +198,7 @@
             </div>
         </section>
 
-        <section class='capabilities'>
+        <section class='capabilities section' id='capabilities'>
             <div class="capabilities-content">
                 <h2 class='title-h2'>Что я умею</h2>
                 <img src="ico/underline.png" alt="" class='underline'>
@@ -246,7 +288,7 @@
             </div>
         </section>
 
-        <section class="cases">
+        <section class="cases section" id='cases'>
             <div class="cases-content">
                 <h2 class='title-h2'>Кейсы</h2>
                 <img src="ico/underline.png" alt="" class='underline'>
@@ -254,7 +296,35 @@
 
                 <div class="container">
                     <div class="case">
-                        <img src="img/case.jpg" alt="кейс" class='case-img col-12'>
+
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="cases/case1.png" href="cases/case1.png" class="d-block w-100 image-link" alt="...">
+                                </div>
+
+                                <div class="carousel-item" data-bs-interval="10000">
+                                    <img src="cases/case2.png" href="cases/case2.png" class="d-block w-100 image-link" alt="...">
+                                </div>
+
+                                <div class="carousel-item" data-bs-interval="10000">
+                                    <img src="cases/case3.png" href='cases/case3.png' class="d-block w-100 image-link" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
+                        </div>
 
                         <div class="cases-client row">
                             <div class="about-client 
@@ -287,7 +357,7 @@
             </div>
         </section>
 
-        <section class="cost-calculation container-fluid d-flex justify-content-center">
+        <section class="cost-calculation container-fluid d-flex justify-content-center section" id='cost-calculation'>
             <div class="cost-calculation-content container row franklin-gothic">
                 <h2 class='d-block col-12'>Расчёт стоимости</h2>
 
@@ -297,10 +367,23 @@
                        offset-xxl-1 offset-xl-1 offset-lg-1 offset-md-1
                        ">
                         <h3>Тип сайта</h3>
-                        <select name="" id="">
-                            <option value="">Лендинг</option>
-                            <option value="">Сайт-визитка</option>
-                            <option value="">Не знаю</option>
+                        <select name="" id="typeOfSiteValue" class='costCalcItem' onchange="calcSiteCost()">
+                            <option selected disabled value='0'>Выберите тип сайта</option>
+                            <option value="5000">
+                                <p>Лендинг (5000 р.)</p>
+                            </option>
+                            <option value="5000">
+                                <p>Сайт-визитка (5000 р.)</p>
+                            </option>
+                            <option value="10000">
+                                <p>Блог (10000 р.)</p>
+                            </option>
+                            <option value="20000">
+                                <p>Корпоративный сайт (20000 р.)</p>
+                            </option>
+                            <option value="20000">
+                                <p>Интрернет магазин (20000 р.)</p>
+                            </option>
                         </select>
                     </div>
 
@@ -309,10 +392,17 @@
                        offset-xxl-1 offset-xl-1 offset-lg-1 offset-md-1
                        ">
                         <h3>Дизайн</h3>
-                        <select name="" id="">
-                            <option value="">Шаблонный дизайн</option>
-                            <option value="">Уникальный дизайн</option>
-                            <option value="">WOW дизайн</option>
+                        <select name="" id="designOfSiteValue" class='costCalcItem' onchange="calcSiteCost()">
+                            <option selected disabled value='0'>Выберите дизайн</option>
+                            <option value="2000">
+                                <p>Шаблонный дизайн (2000 р.)</p>
+                            </option>
+                            <option value="2000">
+                                <p>По макету (2000 р.)</p>
+                            </option>
+                            <option value="3000">
+                                <p>Уникальный дизайн (3000 р.)</p>
+                            </option>
                         </select>
                     </div>
 
@@ -321,10 +411,17 @@
                        offset-xxl-1 offset-xl-1 offset-lg-1 offset-md-1
                        ">
                         <h3>Адаптивность</h3>
-                        <select name="" id="">
-                            <option value="">Только под компьютеры</option>
-                            <option value="">Только телефоны</option>
-                            <option value="">Полностью адаптивный</option>
+                        <select name="" id="adaptabilityOfSiteValue" class='costCalcItem' onchange="calcSiteCost()">
+                            <option selected disabled value='0'>Как сайт будет адаптирован?</option>
+                            <option value="1000">
+                                <p>Только под компьютеры (1000 р.)</p>
+                            </option>
+                            <option value="1500">
+                                <p>Только телефоны (1500 р.)</p>
+                            </option>
+                            <option value="3000">
+                                <p>Полностью адаптивный (3000 р.)</p>
+                            </option>
                         </select>
                     </div>
 
@@ -332,14 +429,14 @@
                        col-xxl-10 col-xl-10 col-lg-10 col-md-10
                        offset-xxl-1 offset-xl-1 offset-lg-1 offset-md-1
                        ">
-                        <p>Цена <span id='price'>0</span></p>
-                        <p>Сроки <span id='terms'>0</span></p>
+                        <p>Цена (руб.):<span id='price'>0</span></p>
+                        <p>Сроки (дни):<span id='terms'>0</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="statistics container-fluid d-flex justify-content-center">
+        <section class="statistics container-fluid d-flex justify-content-center section" id='statistic'>
             <div class="statistics-content container row">
                 <div class="col-12">
                     <h2 class='title-h2'>Немного статистики</h2>
@@ -348,25 +445,25 @@
                 <div class="statistic row d-none d-lg-flex col-12">
                     <div class="statistic-block col-lg-3">
                         <img src="ico/smail.png" alt="смайл">
-                        <h2>120</h2>
+                        <h2 id='happyClients'>0</h2>
                         <h3>Счастливых клиентов</h3>
                     </div>
 
                     <div class="statistic-block col-lg-3">
                         <img src="ico/end_tag_orange.png" alt="тег">
-                        <h2>4.600</h2>
+                        <h2 id='hoursOfWork'>0</h2>
                         <h3>Часов работы</h3>
                     </div>
 
                     <div class="statistic-block col-lg-3">
                         <img src="ico/check_mark.png" alt="галочка">
-                        <h2>340</h2>
+                        <h2 id='ProjectsComlited'>0</h2>
                         <h3>Выполненных проектов</h3>
                     </div>
 
                     <div class="statistic-block col-lg-3">
                         <img src="ico/trophy.png" alt="кубок">
-                        <h2>23</h2>
+                        <h2 id='awardsRecived'>0</h2>
                         <h3>Награды получено</h3>
                     </div>
                 </div>
@@ -425,65 +522,84 @@
             </div>
         </section>
 
-        <section class="reviews">
-            <div class="reviews-content">
-                <h2 class='title-h2'>Отзывы</h2>
-                <img src="ico/underline.png" alt="" class='underline'>
-                <div class="client-photo">
-                    <img src="img/client.png" alt="клиент">
+        <section class="reviews container section" id='reviews'>
+
+            <div class="reviews-container row d-flex justify-conten-center">
+
+                <div class="reviews-title col-12">
+                    <h2 class='title-h2'>Отзывы</h2>
+                    <img src="ico/underline.png" alt="" class='underline'>
                 </div>
-                <p id='review' class='review'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
-                <div class="whorse-review calibri">
-                    <span id='name' class='name'>Михаил</span><span class='position' id='position-reviewer'>, Ген директор ПАО “Газпром”.</span>
+
+                <div class="reviews-arrow col-1 offset-2" id='arrow-left'>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
                 </div>
-                <div class="dots">
-                    <img src="ico/review_looks_ico.png" alt="">
-                    <img src="ico/review_no_looks_ico.png" alt="">
-                    <img src="ico/review_no_looks_ico.png" alt="">
+
+                <div class="reviews-content col-6">
+
+                    <div class="review-container">
+                        <div class="client-photo">
+                            <img src="" alt="" id='reviewer-img'>
+                        </div>
+
+                        <p id='review' class='review'></p>
+
+                        <div class="whorse-review calibri">
+                            <span id='name' class='name'></span><span>, </span><span class='position' id='position'></span><span>.</span>
+                        </div>
+                    </div>
+                    <div class="dots" id='dots'>
+                        <div class="rev-dot"></div>
+                    </div>
                 </div>
+
+
+                <div class="reviews-arrow col-1" id='arrow-right'>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+
             </div>
+
         </section>
 
-        <footer class='footer container-fluid d-flex justify-content-center'>
+        <footer class='footer container-fluid d-flex justify-content-center section' id='footer'>
             <div class="footer-content container row">
                 <div class="col-12">
                     <h2 class='fs-1 franklin-gothic'>Мои контакты</h2>
                     <img src="ico/underline.png" alt="" class='underline-footer'>
                 </div>
-                <p class='col-xxl-8 col-xl-8 col-lg-10 col-md-10
-                offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</p>
+                <p class='col-xxl-8 col-xl-8 col-lg-10 col-md-12
+                offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</p>
 
-                <div class="contacts row">
+                <div class="contacts row
+                   col-xxl-8 col-xl-8 col-lg-10 col-md-12
+                offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-0">
                     <div class="contact-block
-                       col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-12
-                       offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-1
+                       col-xxl-4 col-xl-4 col-lg-3 col-md-3 col-12
                        ">
                         <img src="ico/marker.png" alt="">
                         <p>Санкт-Петербург<br>Невский проспект 11</p>
                     </div>
 
                     <div class="contact-block
-                       col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-12
-                       offset-xxl-1 offset-xl-1 offset-lg-0 offset-md-0
+                       col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-12
                        ">
                         <img src="ico/letter.png" alt="">
                         <p>info@companyname.com</p>
                     </div>
 
                     <div class="contact-block
-                       col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-12
-                       offset-xxl-1 offset-xl-1 offset-lg-0 offset-md-0
+                       col-xxl-4 col-xl-4 col-lg-3 col-md-3 col-12
                        ">
                         <img src="ico/telephone.png" alt="">
                         <p>+7 999 999-99-99</p>
                     </div>
                 </div>
-
                 <h3 class='fs-2 col-12 franklin-gothic'>Оставьте мне сообщение</h3>
 
                 <div class="input-message 
-                   col-xxl-8 col-xl-8 col-lg-10 col-md-10
-                   offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-1
+                   col-xxl-8 col-xl-8 col-lg-10 col-md-12
+                   offset-xxl-2 offset-xl-2 offset-lg-1 offset-md-0
                    franklin-gothic">
                     <form action="#">
                         <div class="name-mail">
@@ -494,22 +610,80 @@
                         <input type="button" value='Отправить' class='send-message btn-active'>
                     </form>
                 </div>
-                <!--
-            <div class="social-networks">
-                <img src="ico/facebook.png" alt="">
-                <img src="ico/twitter.png" alt="">
-                <img src="ico/ball.png" alt="">
-                <img src="ico/cat.png" alt="">
-                <img src="ico/instagram.png" alt="">
-                <img src="ico/in.png" alt="">
+
+                <div class="send-review col-12">
+
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>asddass</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes213</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="social-networks">
+                    <a href=""><img src="ico/facebook.png" alt=""></a>
+                    <a href=""><img src="ico/twitter.png" alt=""></a>
+                    <a href=""><img src="ico/ball.png" alt=""></a>
+                    <a href=""><img src="ico/cat.png" alt=""></a>
+                    <a href=""><img src="ico/instagram.png" alt=""></a>
+                    <a href=""><img src="ico/in.png" alt=""></a>
+                </div>
+
             </div>
-            -->
-            </div>
+
         </footer>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>asddass</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes213</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <script src='js/preloader.js'></script>
+
     <script src='js/bootstrap.bundle.min.js'></script>
+    <script src='js/jquery-3.6.0.min.js'></script>
+    <script src='js/jquery.magnific-popup.min.js'></script>
     <script src='js/script.js'></script>
 </body>
 
