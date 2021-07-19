@@ -43,7 +43,7 @@ $(window).scroll(() => {
 
     $('.section').each((i, el) => {
 
-        if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
+        if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance + 400) {
 
             $('nav a div').each((i, el) => {
                 if ($(el).hasClass('active')) {
@@ -207,6 +207,7 @@ function statisticCountMain() {
 
                         if (count.textContent == x) {
                             clearInterval(int);
+                            //console.log(x + ' was finished')
                         }
                     }, 200);
                 };
@@ -308,10 +309,8 @@ function statisticCountMain() {
 /* подсчёт количиства точек исходя из количества отзывов */
 function dotsCount() {
     
-    /* получаю количество отзывов */
     let countReviews = reviews.length;
     
-    /* добавляю нужное кол-во точек в блок */
     for (let i = 1; i < countReviews; i++) {
         
         let dots = document.getElementById('dots');
@@ -327,13 +326,13 @@ dotsCount()
 /* получение значений отзыва по индексу */
 function reviewContent(index) {
     
-    /* получаю элемент на странице */
+    
     let review = document.getElementById('review');
     let name = document.getElementById('name');
     let position = document.getElementById('position');
     let reviewer = document.getElementById('reviewer-img');
     
-    /*  по индексу вытаскиваю из списка значения для элементов */
+    
     review.textContent = reviews[index]['review'];
     name.textContent = reviews[index]['name'];
     position.textContent = reviews[index]['position'];
@@ -344,14 +343,12 @@ function reviewContent(index) {
 /* смена активной точки */
 function changeDot() {
     
-    /* определяю поле с точками */
     let dots = document.getElementsByClassName('rev-dot');
     
-    /* удаляю активный класс у всех точек */
     for (let i = 0; i < dots.length; i++){
         dots[i].classList.remove('rev-dot-active')
     };
-    /* добавляю активный класс нужной точке */
+    
     dots[index].classList.add('rev-dot-active')
     
 }
@@ -397,6 +394,14 @@ $(stBtnRight).click(() => {
 /* модальное окно для картинок */
 $('.image-link').magnificPopup({type:'image'});
 
+
+
+calcSiteCost()
+
+changeDot()
+reviewContent(index)
+
+
 /* отложеная прогрузка картинок */
 let options = {threshole: [0]};
 let observer = new IntersectionObserver(onEntry, options);
@@ -416,7 +421,6 @@ function onEntry(entry){
     });
 }
 
-/* отложенный запуск счётчика для блока статистики */
 let options1 = {threshole: [0.9]};
 let observer1 = new IntersectionObserver(onEntry1, options1);
 elements = $('.statistics');
@@ -434,8 +438,3 @@ function onEntry1(entry){
         }
     });
 }
-
-
-calcSiteCost()
-changeDot()
-reviewContent(index)
