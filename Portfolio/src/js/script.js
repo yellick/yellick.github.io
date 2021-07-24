@@ -192,6 +192,6 @@ $(window).scroll(() => {
 });
 
 // для отложенных анимаций
-wow.init();
+new WOW().init();
 
 caseSort()
