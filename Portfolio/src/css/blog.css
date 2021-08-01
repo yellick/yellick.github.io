@@ -29,6 +29,11 @@ body {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: #3290c7;
+}
+
 body p {
     margin-bottom: 1.5em;
     font-size: 12pt;
@@ -53,14 +58,13 @@ main {
     font-family: 'OpenSans-Bold', sans-serif;
     font-size: 18pt;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 #title {
     max-width: 100%;
     font-family: 'OpenSans-Bold', sans-serif;
     font-weight: bold;
-    font-size: 40pt;
+    font-size: 34pt;
     margin: 50px auto 30px;
 }
 
@@ -87,5 +91,8 @@ main {
     }
     body p {
         font-size: 14pt;
+    }
+    main {
+        width: 90%;
     }
 }

@@ -11,10 +11,32 @@
 </head>
 
 <body>
-    
-    
+
+    <div class="fill d-lg-none"></div>
+
+    <div class="sidebar-menu d-lg-none">
+        <div class="sidebar-title">
+            <p>Навигация</p>
+        </div>
+        <div class="sidebar-menu_item">
+            <a href="#home" class='sidebar-menu_link sidebar-menu_item-border active'>Главная</a>
+        </div>
+        <div class="sidebar-menu_item sidebar-menu_item-bt">
+            <a href="#about" class='sidebar-menu_link sidebar-menu_item-border'>Обо мне</a>
+        </div>
+        <div class="sidebar-menu_item sidebar-menu_item-bt">
+            <a href="#cases-sect" class='sidebar-menu_link sidebar-menu_item-border'>Портфолио</a>
+        </div>
+        <div class="sidebar-menu_item sidebar-menu_item-bt">
+            <a href="#blog" class='sidebar-menu_link sidebar-menu_item-border'>Блог</a>
+        </div>
+        <div class="sidebar-menu_item sidebar-menu_item-bt">
+            <a href="#contact" class='sidebar-menu_link sidebar-menu_item-border'>Контакты</a>
+        </div>
+    </div>
+
     <header class='home section' id='home'>
-       
+
         <div class="home-container position-absolute top-50 start-50 translate-middle raleway-medium">
 
             <div class="title">
@@ -31,24 +53,29 @@
         </div>
 
         <nav>
-            <ul>
-                <a href="#home">
+            <ul class='menu'>
+                <a href="#home" class='d-none d-lg-block'>
                     <li class='active'>Главная</li>
                 </a>
-                <a href="#about">
+                <a href="#about" class='d-none d-lg-block'>
                     <li>Обо мне</li>
                 </a>
-                <a href="#cases-sect">
+                <a href="#cases-sect" class='d-none d-lg-block'>
                     <li>Портфолио</li>
                 </a>
-                <a href="#blog">
+                <a href="#blog" class='d-none d-lg-block'>
                     <li>Блог</li>
                 </a>
-                <a href="#contact">
+                <a href="#contact" class='d-none d-lg-block'>
                     <li>Контакты</li>
+                </a>
+
+                <a href="" class="menu-btn d-lg-none">
+                    <span></span>
                 </a>
             </ul>
         </nav>
+        
     </header>
 
     <main>
@@ -62,9 +89,9 @@
                 </div>
 
                 <!-- advantages -->
-                <div class="row container d-flex justify-content-around fs-16px">
+                <div class="row container d-flex justify-content-around fs-16px advantages-conteiner">
 
-                    <div class="col-lg-3 col-md-6 col-12 advantages-conteiner wow ac-1">
+                    <div class="col-lg-3 col-md-6 col-12 advantage-conteiner wow ac-1">
                         <div class="advantages-conteiner-ico position-relative">
                             <i class="fa fa-clock-o position-absolute top-50 start-50 translate-middle" aria-hidden="true"></i>
                         </div>
@@ -74,7 +101,7 @@
                         <p class=''>Быстрое время загрузки сайти и взаимодействие с элементами без задержек.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12 advantages-conteiner wow ac-2">
+                    <div class="col-lg-3 col-md-6 col-12 advantage-conteiner wow ac-2">
                         <div class="advantages-conteiner-ico position-relative">
                             <i class="fa fa-mobile position-absolute top-50 start-50 translate-middle" aria-hidden="true"></i>
                         </div>
@@ -84,7 +111,7 @@
                         <p>Мои макеты работают на любых устройствах, больших или маленьких.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12 advantages-conteiner wow ac-3">
+                    <div class="col-lg-3 col-md-6 col-12 advantage-conteiner wow ac-3">
                         <div class="advantages-conteiner-ico position-relative">
                             <i class="fa fa-lightbulb-o position-absolute top-50 start-50 translate-middle" aria-hidden="true"></i>
                         </div>
@@ -94,7 +121,7 @@
                         <p>Предпочитаю интуитивно понятные UX/UI.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12 advantages-conteiner wow ac-4">
+                    <div class="col-lg-3 col-md-6 col-12 advantage-conteiner wow ac-4">
                         <div class="advantages-conteiner-ico position-relative">
                             <i class="fa fa-rocket position-absolute top-50 start-50 translate-middle" aria-hidden="true"></i>
                         </div>
@@ -129,7 +156,7 @@
                                         <p>HTML</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillHtmlScale'></div>
+                                        <div class="skill-progress-bar" id='skillHtmlScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>90%</span>
                                         </div>
@@ -142,7 +169,7 @@
                                         <p>CSS</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillCssScale'></div>
+                                        <div class="skill-progress-bar" id='skillCssScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>90%</span>
                                         </div>
@@ -155,7 +182,7 @@
                                         <p>JS</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillJsScale'></div>
+                                        <div class="skill-progress-bar" id='skillJsScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>80%</span>
                                         </div>
@@ -168,7 +195,7 @@
                                         <p>React</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillReactScale'></div>
+                                        <div class="skill-progress-bar" id='skillReactScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>80%</span>
                                         </div>
@@ -181,7 +208,7 @@
                                         <p>Angular</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillAngularScale'></div>
+                                        <div class="skill-progress-bar" id='skillAngularScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>50%</span>
                                         </div>
@@ -194,7 +221,7 @@
                                         <p>Node.js</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillNodeScale'></div>
+                                        <div class="skill-progress-bar" id='skillNodeScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>65%</span>
                                         </div>
@@ -207,7 +234,7 @@
                                         <p>Ruby</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillRubyScale'></div>
+                                        <div class="skill-progress-bar" id='skillRubyScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>65%</span>
                                         </div>
@@ -220,7 +247,7 @@
                                         <p>UI Design</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillDesignScale'></div>
+                                        <div class="skill-progress-bar" id='skillDesignScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>50%</span>
                                         </div>
@@ -233,7 +260,7 @@
                                         <p>Photoshop</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillPhotoshopScale'></div>
+                                        <div class="skill-progress-bar" id='skillPhotoshopScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>65%</span>
                                         </div>
@@ -246,7 +273,7 @@
                                         <p>Sketch</p>
                                     </div>
                                     <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar wow" id='skillSketchScale'></div>
+                                        <div class="skill-progress-bar" id='skillSketchScale'></div>
                                         <div class="skill-value-container">
                                             <span class='d-none d-lg-inline'>50%</span>
                                         </div>
@@ -295,13 +322,6 @@
                             </div>
                         </button>
 
-                        <button class='cases-btn ac-4 wow' id='case-btn-ruby'>
-                            <div class="case-btn-fill"></div>
-                            <div class="case-btn-title">
-                                <p>Ruby</p>
-                            </div>
-                        </button>
-
                     </div>
 
                     <div id='cases' class='wow'></div>
@@ -318,41 +338,7 @@
                     <div class="underline wow"></div>
                 </div>
 
-                <div class='col-12' id="blogs">
-                    
-                        <a href='blogs/blog1.html' target="_blank" class="blog-block wow ac-1">
-                            <img src="img/blog-1.jpg" alt="" class='blog-block-img'>
-                            <p class='blog-block-title'>"Опять ничего не получается"</p>
-                            <p class='blog-block-date'>22 июля, 2021</p>
-                            <div class="blog-block-underline"></div>
-                            <p class='blog-block-disc'>У каждого разработчика бывает такой момент, когда он застревает на одной проблеме...</p>
-                        </a>
-
-                        <a href='blogs/blog1.html' target="_blank" class="blog-block wow ac-2">
-                            <img src="img/blog-1.jpg" alt="" class='blog-block-img'>
-                            <p class='blog-block-title'>"Опять ничего не получается"</p>
-                            <p class='blog-block-date'>22 июля, 2021</p>
-                            <div class="blog-block-underline"></div>
-                            <p class='blog-block-disc'>У каждого разработчика бывает такой момент, когда он застревает на одной проблеме...</p>
-                        </a>
-                        
-                        <a href='blogs/blog1.html' target="_blank" class="blog-block wow ac-3">
-                            <img src="img/blog-1.jpg" alt="" class='blog-block-img'>
-                            <p class='blog-block-title'>"Опять ничего не получается"</p>
-                            <p class='blog-block-date'>22 июля, 2021</p>
-                            <div class="blog-block-underline"></div>
-                            <p class='blog-block-disc'>У каждого разработчика бывает такой момент, когда он застревает на одной проблеме...</p>
-                        </a>
-
-                        <a href='blogs/blog1.html' target="_blank" class="blog-block wow ac-4">
-                            <img src="img/blog-1.jpg" alt="" class='blog-block-img'>
-                            <p class='blog-block-title'>"Опять ничего не получается"</p>
-                            <p class='blog-block-date'>22 июля, 2021</p>
-                            <div class="blog-block-underline"></div>
-                            <p class='blog-block-disc'>У каждого разработчика бывает такой момент, когда он застревает на одной проблеме...</p>
-                        </a>
-
-                </div>
+                <div class='col-12' id="blogs"></div>
 
             </div>
         </section>
@@ -368,11 +354,11 @@
 
                 <p class='p col-12 col-12 wow'>У вас есть вопросы или хотите сотрудничать?</p>
 
-                <form action="#" class='wow col-xxl-5 col-xl-5 col-lg-6 col-md-8 col-sm-8 col-10'>
-                    <input type="text" placeholder='Имя' class='contact-input-text'>
-                    <input type="text" placeholder='Почта' class='contact-input-text'>
-                    <textarea name="" id="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
-                    <input type="submit" value="Отправить" class='contact-submit'>
+                <form action="php/mail.php" method='post' class='wow col-xxl-5 col-xl-5 col-lg-6 col-md-8 col-sm-8 col-10 contact-form'>
+                    <input name='client-name' type="text" placeholder='Имя' class='contact-input-text' required>
+                    <input name='client-email' type="email" placeholder='Почта' class='contact-input-text' required>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="Сообщение" required></textarea>
+                    <button type="submit" class='contact-submit'>Отправить</button>
                 </form>
 
             </div>

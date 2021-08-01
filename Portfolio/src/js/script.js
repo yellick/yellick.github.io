@@ -17,10 +17,20 @@ function caseSort() {
 
         // перебираю классы у всех проектов
         data['projects'].forEach((item, i, arr) => {
-
+            
+            // переменная определяющая, будет ли добавлен данный кейс
+            let addendum = false;
+                        
             // если введённый тип есть в списке то добавляю элемент на страницу
-            if ((type == item['class'][0]) || (type == item['class'][1])) {
-
+            item['class'].forEach((item) => {
+                if (type == item) {
+                     addendum = true;
+                }
+            });
+            
+            // не в теле forEach потому что и так работает, а в forEach нужно переделывать
+            if (addendum) {
+                
                 // создаю элементы
                 let Case = document.createElement('div');
                 let caseFill = document.createElement('div');
@@ -43,10 +53,11 @@ function caseSort() {
                 caseType.textContent = item['tools'];
                 caseBtn.textContent = 'Узнать больше';
 
-                $(Case).css('background', item['bgc']);
+                // item это элемент массива projects
+                $(Case).css('background', item['bg']);
                 caseBtnLink.setAttribute('href', item['href']);
 
-
+                // добавляю элементы на страницу
                 Case.appendChild(caseFill);
                 caseFill.appendChild(caseInfo);
                 caseInfo.appendChild(caseTitle);
@@ -57,7 +68,8 @@ function caseSort() {
             }
         });
     };
-
+    
+    // удаляю активный класс у всех кнопок
     function activeClass() {
         $('.cases-btn').removeClass('case-btn-active');
     };
@@ -68,7 +80,6 @@ function caseSort() {
         $('#case-btn-all').addClass('case-btn-active');
 
         let type = 'all';
-        console.log(type);
 
         cases.innerHTML = '';
 
@@ -82,7 +93,6 @@ function caseSort() {
         $('#case-btn-html').addClass('case-btn-active');
 
         let type = 'html';
-        console.log(type);
 
         cases.innerHTML = '';
 
@@ -96,21 +106,6 @@ function caseSort() {
         $('#case-btn-js').addClass('case-btn-active');
 
         let type = 'js';
-        console.log(type);
-
-        cases.innerHTML = '';
-
-        casesCount(type)
-
-    });
-
-    $('#case-btn-ruby').click(() => {
-
-        activeClass();
-        $('#case-btn-ruby').addClass('case-btn-active');
-
-        let type = 'ruby';
-        console.log(type);
 
         cases.innerHTML = '';
 
@@ -121,9 +116,8 @@ function caseSort() {
     casesCount('all')
 }
 
-
 // создаю блоки блога
-/*data['blog'].forEach((item, i) => {
+data['blog'].forEach((item, i) => {
 
     let blogBlock = document.createElement('a');
     let blogBlockContent = document.createElement('div');
@@ -194,4 +188,94 @@ $(window).scroll(() => {
 // для отложенных анимаций
 new WOW().init();
 
-caseSort()
+// активация кнопки меню
+// функция по нажатию на кнопку
+$('.menu-btn').on('click', function (e) {
+    // отменяю событие перехода по ссылкке
+    e.preventDefault();
+    // добавляю кнопке класс делающей её "крестиком"
+    $(this).toggleClass('menu-btn_active');
+    // отображаю заливку страницы с помощью класса
+    $('.fill').toggleClass('fill-active');
+    // выдвигаю сайдбар меню
+    $('.sidebar-menu').toggleClass('sidebar-menu-show');
+});
+// деактивация кнопки меню
+// функция по нажатию на заливку
+$('.fill').on('click', function () {
+    // делаю кнопку меню обычной
+    $('.menu-btn').toggleClass('menu-btn_active');
+    // убираю заливку
+    $('.fill').toggleClass('fill-active');
+    // задвигаю сайдбар
+    $('.sidebar-menu').toggleClass('sidebar-menu-show');
+});
+// функция по нажатию на пункт меню
+$('.sidebar-menu_item').on('click', function () {
+    // делаю кнопку меню обычной
+    $('.menu-btn').toggleClass('menu-btn_active');
+    // убираю заливку
+    $('.fill').toggleClass('fill-active');
+    // задвигаю сайдбар
+    $('.sidebar-menu').toggleClass('sidebar-menu-show');
+});
+
+// заполнение шкалы навыков
+function intObs() {
+    
+    let options = {threshole: [0]};
+    let observer = new IntersectionObserver(onEntry, options);
+    let elements = $('.about-my-skills');
+
+    elements.each((i, el) => {
+        observer.observe(el);
+    });
+
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                // html
+                $('#skillHtmlScale').addClass('skillHtmlScale');
+                // css
+                $('#skillCssScale').addClass('skillCssScale');
+                // js
+                $('#skillJsScale').addClass('skillJsScale');
+                // react
+                $('#skillReactScale').addClass('skillReactScale');
+                // angular
+                $('#skillAngularScale').addClass('skillAngularScale');
+                // node
+                $('#skillNodeScale').addClass('skillNodeScale');
+                // ruby
+                $('#skillRubyScale').addClass('skillRubyScale');
+                // design
+                $('#skillDesignScale').addClass('skillDesignScale');
+                // photoshop
+                $('#skillPhotoshopScale').addClass('skillPhotoshopScale');
+                // sketch
+                $('#skillSketchScale').addClass('skillSketchScale');
+
+            }
+        });
+    }
+
+};
+
+// отмена функции при отправке формы и вызов алерт
+$('form').submit(function(e) {
+    e.preventDefault();
+    
+    $.ajax({
+        type: 'POST',
+        url: 'php/mail.php',
+        data: $(this).serialize()
+    }).done(function(){
+        $('.contact-form').find('input').val('');
+        $('.contact-form').find('textarea').val('');
+        alert('Спасибо за сообщение, оно успешно доставлено!  :)')
+    });
+    return false
+});
+
+intObs();
+caseSort();

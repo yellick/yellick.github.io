@@ -30,16 +30,17 @@ body {
     height: 100%;
 }
 
-a:focus,
+a,
+a:hover,
+a:visited,
 a:active {
+    color: inherit;
     outline: none;
+    text-decoration: none;
 }
 
-a,
-a:visited,
-a:hover {
-    text-decoration: none;
-    color: inherit;
+ul {
+    list-style-type: none;
 }
 
 .active {
@@ -104,6 +105,114 @@ a:hover {
     font-family: 'raleway-semibold', sans-serif;
 }
 
+/* ------------------------------- */
+/* sidebar menu */
+
+.fill {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, .2);
+    display: none;
+    transition: all 3s;
+}
+
+.fill-active {
+    display: block;
+}
+
+.sidebar-menu {
+    height: 100%;
+    position: fixed;
+    z-index: 12;
+    background-color: #1b242f;
+    padding: 40px;
+    left: -100%;
+    transition: all 0.3s;
+}
+
+.sidebar-menu-show {
+    left: 0%;
+    transition: all 0.3s;
+}
+
+.sidebar-title {
+    color: #fff;
+    font-size: 20pt;
+}
+
+.sidebar-menu_item {
+    width: 100%;
+    height: 40px;
+    padding: 5px 0 4px 0;
+    color: #fff;
+}
+
+.sidebar-menu_item-bt {
+    border-top: 1px solid #eee;
+}
+
+.sidebar-menu_link {
+    font-size: 16pt;
+    line-height: 22px;
+}
+
+/* menu btn */
+
+.menu-btn {
+    background: none;
+    border: 2px solid #f91f78;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+    border-radius: 50px;
+    position: relative;
+    top: 5px;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #04c2c9;
+    display: block;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+    content: '';
+    transition: 0.1s;
+}
+
+.menu-btn span::after {
+    transform: translateY(5px);
+}
+
+.menu-btn span::before {
+    transform: translateY(-5px);
+}
+
+.menu-btn_active span {
+    height: 0;
+}
+
+.menu-btn_active span::after {
+    transform: rotate(45deg)
+}
+
+.menu-btn_active span::before {
+    transform: rotate(-45deg)
+}
+
 
 /*----------------------------------------*/
 /* home */
@@ -151,7 +260,7 @@ a:hover {
 }
 
 nav {
-    z-index: 1001;
+    z-index: 10;
     position: relative;
     top: 100%;
     height: 50px;
@@ -162,8 +271,10 @@ nav {
     border-bottom: 3px solid #04c2c9;
 }
 
-ul {
-    list-style-type: none;
+.menu {
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -190,18 +301,22 @@ nav ul li:hover {
         background-color: #04c2c9;
         border-color: #04c2c9;
     }
+
     .home-btn:hover i {
         transform: rotate(90deg);
     }
 }
 
 @media (max-width: 991px) {
-    .home-btn {
-        background-color: #04c2c9;
-        border-color: #04c2c9;
-    }
     .home-btn i {
         transform: rotate(90deg);
+    }
+
+    nav {
+        top: 0;
+        left: 0;
+        position: fixed;
+        height: 61px;
     }
 }
 
@@ -217,10 +332,15 @@ nav ul li:hover {
 }
 
 .advantages-conteiner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage-conteiner {
     position: relative;
     height: 230px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .advantages-conteiner-ico {
@@ -340,13 +460,14 @@ nav ul li:hover {
 
 .cases {
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #eee;
     padding-top: 50px;
     padding-bottom: 100px;
 }
 
 .cases-btns {
-    padding: 0 10% 0 10%;
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
     width: 100%;
 }
@@ -388,14 +509,6 @@ nav ul li:hover {
     position: absolute;
 }
 
-.cases-btn:hover .case-btn-fill {
-    height: 100%;
-}
-
-.case-btn-active:hover .case-btn-fill {
-    height: 0;
-}
-
 .cases-container {
     width: 900px;
     padding: 0;
@@ -404,9 +517,13 @@ nav ul li:hover {
 #cases {
     width: 100%;
     padding: 0;
+    line-height: 0;
+    margin-left: auto;
+    margin: auto;
 }
 
 .case {
+    line-height: 1.5;
     width: 300px;
     height: 250px;
     margin: 0;
@@ -422,7 +539,7 @@ nav ul li:hover {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: #fff;
+    background: #eee;
     text-align: center;
     transition: all .5s;
     font-family: 'raleway-medium', sans-serif;
@@ -459,6 +576,14 @@ nav ul li:hover {
     transition: all .5s;
 }
 
+.cases-btn:hover .case-btn-fill {
+    height: 100%;
+}
+
+.case-btn-active:hover .case-btn-fill {
+    height: 0;
+}
+
 .case-btn:hover {
     background: #e31b6d;
     color: #fff;
@@ -475,8 +600,27 @@ nav ul li:hover {
 
 .case:hover .case-btn {
     opacity: 1;
+    display: inline-block;
 }
 
+
+@media (max-width: 899px) {
+    #cases {
+        width: 600px;
+    }
+}
+
+@media (max-width: 599px) {
+    #cases {
+        width: 100%;
+    }
+    .cases {
+        padding-bottom: 0;
+    }
+    .case {
+        width: 100%;
+    }
+}
 
 /* ------------------------------------- */
 /* blog */
@@ -500,15 +644,6 @@ nav ul li:hover {
     transition: all 0.3s;
 }
 
-.blog-block:hover {
-    box-shadow: 8px 5px 5px rgba(0, 0, 0, .3);
-    transform: scale(1.02);
-}
-
-.blog-block:hover .blog-block-title {
-    color: #04c2c9;
-}
-
 .blog-block-fill {
     position: absolute;
     opacity: 0;
@@ -529,7 +664,6 @@ nav ul li:hover {
     margin-bottom: 10px;
     height: 175px;
     width: 100%;
-    max-width: 100%;
     object-fit: cover;
 }
 
@@ -568,15 +702,32 @@ nav ul li:hover {
     margin-left: 3%;
 }
 
-@media (max-width: 1199px) {
-    .blog-block-title {
-        font-size: 14pt;
+
+
+@media (min-width: 992px) {
+    .blog-block:hover {
+        box-shadow: 8px 5px 5px rgba(0, 0, 0, .3);
+        transform: scale(1.02);
+    }
+    .blog-block:hover .blog-block-title {
+        color: #04c2c9;
     }
 }
 
 @media (max-width: 991px) {
     .blog-block {
-        width: 49%;
+        width: 50%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-block {
+        width: 90%;
+        text-align: left;
+    }
+    #blogs {
+        text-align: center;
     }
 }
 
@@ -590,7 +741,7 @@ nav ul li:hover {
     text-align: center;
 }
 
-.contact .sect-title p{
+.contact .sect-title p {
     color: #fff;
     margin-bottom: 30px;
 }
@@ -725,104 +876,122 @@ footer .go-top:hover i {
     -o-animation: showTitle 0.5s;
     animation: showTitle 0.5s;
 }
+
 .ac-1 {
     -webkit-animation: advantageContainerMove1 1s;
     -o-animation: advantageContainerMove1 1s;
     animation: advantageContainerMove1 1s;
 }
+
 .ac-2 {
     -webkit-animation: advantageContainerMove2 1s;
     -o-animation: advantageContainerMove2 1s;
     animation: advantageContainerMove2 1s;
 }
+
 .ac-3 {
     -webkit-animation: advantageContainerMove3 1s;
     -o-animation: advantageContainerMove3 1s;
     animation: advantageContainerMove3 1s;
 }
+
 .ac-4 {
     -webkit-animation: advantageContainerMove4 1s;
     -o-animation: advantageContainerMove4 1s;
     animation: advantageContainerMove4 1s;
 }
+
 #cases {
     position: relative;
     -webkit-animation: showCases 2s;
     -o-animation: showCases 2s;
     animation: showCases 2s;
 }
+
 .about-my-skills {
     position: relative;
     -webkit-animation: aboutMySkillsMove 1.3s;
     -o-animation: aboutMySkillsMove 1.3s;
     animation: aboutMySkillsMove 1.3s;
 }
+
 .about-me {
     position: relative;
     -webkit-animation: aboutMeMove 1.3s;
     -o-animation: aboutMeMove 1.3s;
     animation: aboutMeMove 1.3s;
 }
-#skillHtmlScale {
+
+.skillHtmlScale {
     width: 90%;
     -webkit-animation: skillHtmlScaleMove 2.5s;
     -o-animation: skillHtmlScaleMove 2.5s;
     animation: skillHtmlScaleMove 2.5s;
 }
-#skillCssScale {
+
+.skillCssScale {
     width: 90%;
     -webkit-animation: skillCssScaleMove 2.5s;
     -o-animation: skillCssScaleMove 2.5s;
     animation: skillCssScaleMove 2.5s;
 }
-#skillJsScale {
+
+.skillJsScale {
     width: 80%;
     -webkit-animation: skillJsScaleMove 2.5s;
     -o-animation: skillJsScaleMove 2.5s;
     animation: skillJsScaleMove 2.5s;
 }
-#skillReactScale {
+
+.skillReactScale {
     width: 80%;
     -webkit-animation: skillReactScaleMove 2.5s;
     -o-animation: skillReactScaleMove 2.5s;
     animation: skillReactScaleMove 2.5s;
 }
-#skillAngularScale {
+
+.skillAngularScale {
     width: 50%;
     -webkit-animation: skillAngularScaleMove 2.5s;
     -o-animation: skillAngularScaleMove 2.5s;
     animation: skillAngularScaleMove 2.5s;
 }
-#skillNodeScale {
+
+.skillNodeScale {
     width: 65%;
     -webkit-animation: skillNodeScaleMove 2.5s;
     -o-animation: skillNodeScaleMove 2.5s;
     animation: skillNodeScaleMove 2.5s;
 }
-#skillRubyScale {
+
+.skillRubyScale {
     width: 65%;
     -webkit-animation: skillRubyScaleMove 2.5s;
     -o-animation: skillRubyScaleMove 2.5s;
     animation: skillRubyScaleMove 2.5s;
 }
-#skillDesignScale {
+
+.skillDesignScale {
     width: 50%;
     -webkit-animation: skillDesignScaleMove2.5s;
     -o-animation: skillDesignScaleMove 2.5s;
     animation: skillDesignScaleMove 2.5s;
 }
-#skillPhotoshopScale {
+
+.skillPhotoshopScale {
     width: 65%;
     -webkit-animation: skillPhotoshopScaleMove 2.5s;
     -o-animation: skillPhotoshopScaleMove 2.5s;
     animation: skillPhotoshopScaleMove 2.5s;
 }
-#skillSketchScale {
+
+.skillSketchScale {
     width: 50%;
     -webkit-animation: skillSketchScaleMove 2.5s;
     -o-animation: skillSketchScaleMove 2.5s;
     animation: skillSketchScaleMove 2.5s;
 }
+
 .contact form {
     position: relative;
     -webkit-animation: formShow 2s;

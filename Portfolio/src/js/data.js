@@ -1,78 +1,29 @@
 let data = {
     projects: [
         {
-            name: 'Calculator',
-            class: ['all', 'js'],
-            tools: 'Java Script',
+            name: 'Сайт-визитка',
+            class: ['all', 'html', 'js'],
+            tools: 'HTML/CSS/JS',
             href: '',
-            bgc: '#ebd071',
+            bg: 'url(../cases/andrewBrown.jpeg) left/cover no-repeat',
             },
         {
-            name: 'Italian Pizza',
+            name: 'Сайт-визитка',
             class: ['all', 'html'],
             tools: 'HTML/CSS',
             href: '',
-            bgc: '#71b0eb',
-            },
-        {
-            name: 'Hello World',
-            class: ['all', 'js'],
-            tools: 'Java Script, Python',
-            href: '',
-            bgc: '#ebd071',
-            },
-        {
-            name: 'Data Base',
-            class: ['all', 'ruby'],
-            tools: 'Ruby',
-            href: '',
-            bgc: '#eb7171',
-            },
-        {
-            name: 'CrowNow Discover',
-            class: ['all', 'html'],
-            tools: 'HTML/CSS',
-            href: '',
-            bgc: '#71b0eb',
-            },
-        {
-            name: 'Walker Tracker',
-            class: ['all', 'ruby'],
-            tools: 'Ruby',
-            href: '',
-            bgc: '#eb7171',
-            },
-        {
-            name: 'This Page',
-            class: ['all', 'html'],
-            tools: 'HTML/CSS',
-            href: '',
-            bgc: '#71b0eb',
-            },
-        {
-            name: 'NEVER SURRENDER',
-            class: ['all', 'js'],
-            tools: 'Java Script',
-            href: '',
-            bgc: '#ebd071',
-            },
-        {
-            name: 'New Relic',
-            class: ['all', 'ruby'],
-            tools: 'Ruby',
-            href: '',
-            bgc: '#eb7171',
+            bg: 'url(../cases/andrewBrown.jpeg) left/cover no-repeat',
             },
         ],
 
     blog: [
         {
-            link: 'blog.html',
+            link: 'blogs/blog.html#0',
             img: 'img/blog-1.jpg',
             title: '"Опять ничего не получается"',
             date: '22 июля, 2021',
             discription: 'У каждого разработчика бывает такой момент, когда он застревает на одной проблеме...',
-            introductionImg: 'img/breaking-your-coders-block.jpg',
+            introductionImg: '../img/breaking-your-coders-block.jpg',
             introduction: ['У каждого разработчика бывает такой момент, когда он застревает на одной проблеме которую нужно решить. Отчаянно ищем ответы на разнах форумах, тратим кучу нервов и времени, а потом идём спать и проснувшись понимаем на сколько простым было решение.', 'Вот 5 вещей которым которые помогают мне преодолеть подобные моменты.'],
 
             // Заголовки и тексты статьи
@@ -105,11 +56,26 @@ let data = {
                         },
                 ],
             },
+        {
+            link: 'blogs/blog.html#1',
+            img: 'img/blog-2.jpg',
+            title: 'Полезные расширения для Brackets',
+            date: '25 июля, 2021',
+            discription: 'Brackets это один из самых популярных редакторов кода среди верстальщиков...',
+            introductionImg: '../img/brackets.jpg',
+            introduction: ['Brackets это один из самых популярных редакторов кода среди верстальщиков и это не просто так.', 'Brackets ориентирован на работу с HTML, CSS и JavaScript. Эти же технологии лежат в основе самого редактора, что обеспечивает его кроссплатформенность т. е. совместимость с операционными системами Mac, Windows и Linux, а так же поддерживается на GitHub.', 'В этой статье я приведу полезные расширения для Brackets которыми пользуюсь сам.'],
+
+            // Заголовки и тексты статьи
+            content: [
+                {
+                    secondTitle: '1. Emmet',
+                    text: ['Пожалуй одно из самых популярных расширений для вёрстки в целом является Emmet. Он позволяет писать CSS и HTML код быстрее с помощью аббревиатур, разворачивающихся в полноценные теги.', 'Ссылка на гитхаб:', {type: 'link',link: 'https://github.com/emmetio/brackets-emmet', linkName: 'github.com/emmetio/brackets-emmet'}],
+                    },
+                {
+                    secondTitle: '2. Beautify',
+                    text: ['Этот плагин позволяет сочитаение клавиш CTRL + ALT + B оформить структуру разметки с отступами и сделает её читабельной.', {type: 'link', link: 'https://github.com/brackets-beautify/brackets-beautify', linkName: 'github.com/brackets-beautify/brackets-beautify'}],
+                    },
+                ],
+            },
         ],
 };
-
-let blockIndex = 0;
-/*function changeBlockIndex(i){
-    blockIndex = i;
-    completionBlogPage(blockIndex);
-};*/
