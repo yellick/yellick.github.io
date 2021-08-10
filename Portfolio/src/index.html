@@ -7,19 +7,76 @@
     <title>Михаил Губанов, веб-разработчик</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <div class="fill d-lg-none"></div>
+    <!-- modal window in cases -->
+    <div class="case-modal-wrap">
+        <div class="case-modal">
 
+            <!-- slider -->
+            <div class="case-modal-slider" id='case-modal-slider'>
+
+                <div id="left-arrow">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+
+                <img src="" id='modal-img'>
+
+                <div id="right-arrow">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+
+                <div class="counter">
+                    <p id='counter'></p>
+                </div>
+
+            </div>
+
+            <!-- content -->
+            <div class="case-modal-content" id='case-modal-content'>
+                <div class="about-order inline">
+                    <div class="about-order-cont">
+                        <p class='modal-title'>Заказчик:</p>
+                        <a href='' id='client'></a>
+                    </div>
+
+                    <div class="about-order-cont">
+                        <p class='modal-title'>Стоимость:</p>
+                        <p id='price'></p>
+                    </div>
+
+                    <a href="" target="_blank" id='case-link1'>Посетить сайт</a>
+                </div>
+
+                <div class="about-project inline">
+                    <p id='about-project-title' class='modal-title'></p>
+                    <p id='about-project-p'></p>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="case-modal-footer">
+                <a href="" target="_blank" id='case-link2'>Посетить сайт</a>
+                <button id='close-btn' class='case-modal-btn'>Закрыть</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- fill for sidebar menu -->
+    <div class="fill"></div>
+
+    <!-- sidebar menu for phones -->
     <div class="sidebar-menu d-lg-none">
         <div class="sidebar-title">
             <p>Навигация</p>
         </div>
         <div class="sidebar-menu_item">
-            <a href="#home" class='sidebar-menu_link sidebar-menu_item-border active'>Главная</a>
+            <a href="#home" class='sidebar-menu_link sidebar-menu_item-border'>Главная</a>
         </div>
         <div class="sidebar-menu_item sidebar-menu_item-bt">
             <a href="#about" class='sidebar-menu_link sidebar-menu_item-border'>Обо мне</a>
@@ -35,6 +92,7 @@
         </div>
     </div>
 
+    <!-- first page -->
     <header class='home section' id='home'>
 
         <div class="home-container position-absolute top-50 start-50 translate-middle raleway-medium">
@@ -75,11 +133,12 @@
                 </a>
             </ul>
         </nav>
-        
+
     </header>
 
     <main>
 
+        <!-- about -->
         <section class='about container-fluid section' id='about'>
             <div class="about-container container">
 
@@ -158,7 +217,7 @@
                                     <div class="skill-progress position-relative">
                                         <div class="skill-progress-bar" id='skillHtmlScale'></div>
                                         <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>90%</span>
+                                            <span class='d-none d-lg-inline'>70%</span>
                                         </div>
                                     </div>
                                 </li>
@@ -171,7 +230,7 @@
                                     <div class="skill-progress position-relative">
                                         <div class="skill-progress-bar" id='skillCssScale'></div>
                                         <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>90%</span>
+                                            <span class='d-none d-lg-inline'>70%</span>
                                         </div>
                                     </div>
                                 </li>
@@ -184,59 +243,7 @@
                                     <div class="skill-progress position-relative">
                                         <div class="skill-progress-bar" id='skillJsScale'></div>
                                         <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>80%</span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- React -->
-                                <li>
-                                    <div class="skill-title">
-                                        <p>React</p>
-                                    </div>
-                                    <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar" id='skillReactScale'></div>
-                                        <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>80%</span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Angular -->
-                                <li>
-                                    <div class="skill-title">
-                                        <p>Angular</p>
-                                    </div>
-                                    <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar" id='skillAngularScale'></div>
-                                        <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>50%</span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Node.js -->
-                                <li>
-                                    <div class="skill-title">
-                                        <p>Node.js</p>
-                                    </div>
-                                    <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar" id='skillNodeScale'></div>
-                                        <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>65%</span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Ruby -->
-                                <li>
-                                    <div class="skill-title">
-                                        <p>Ruby</p>
-                                    </div>
-                                    <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar" id='skillRubyScale'></div>
-                                        <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>65%</span>
+                                            <span class='d-none d-lg-inline'>60%</span>
                                         </div>
                                     </div>
                                 </li>
@@ -262,20 +269,7 @@
                                     <div class="skill-progress position-relative">
                                         <div class="skill-progress-bar" id='skillPhotoshopScale'></div>
                                         <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>65%</span>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Sketch -->
-                                <li>
-                                    <div class="skill-title">
-                                        <p>Sketch</p>
-                                    </div>
-                                    <div class="skill-progress position-relative">
-                                        <div class="skill-progress-bar" id='skillSketchScale'></div>
-                                        <div class="skill-value-container">
-                                            <span class='d-none d-lg-inline'>50%</span>
+                                            <span class='d-none d-lg-inline'>40%</span>
                                         </div>
                                     </div>
                                 </li>
@@ -289,6 +283,7 @@
             </div>
         </section>
 
+        <!-- portfolio -->
         <section class='cases section container-fluid fs-16px raleway-medium' id='cases-sect'>
             <div class="row d-flex justify-content-center">
 
@@ -330,6 +325,7 @@
             </div>
         </section>
 
+        <!-- blog -->
         <section class='blog section container' id='blog'>
             <div class="row d-flex justify-content-center">
 
@@ -343,6 +339,7 @@
             </div>
         </section>
 
+        <!-- contacts -->
         <section class='contact section container-fluid' id='contact'>
 
             <div class="row">
@@ -353,6 +350,13 @@
                 </div>
 
                 <p class='p col-12 col-12 wow'>У вас есть вопросы или хотите сотрудничать?</p>
+
+                <div class="contact-information">
+                    <span><a href='tel:+79958507881'>+7(995)-850-78-81</a></span>
+                    <span>gubm04@yandex.ru</span>
+                </div>
+
+                <p class='p col-12 col-12 wow'>Или напрямую отправьте мне сообщение</p>
 
                 <form action="php/mail.php" method='post' class='wow col-xxl-5 col-xl-5 col-lg-6 col-md-8 col-sm-8 col-10 contact-form'>
                     <input name='client-name' type="text" placeholder='Имя' class='contact-input-text' required>
@@ -365,6 +369,7 @@
 
         </section>
 
+        <!-- links in footer -->
         <footer class='d-flex justify-content-center'>
 
             <a href="#home" class='go-top'>
@@ -373,24 +378,17 @@
 
             <div class="social-networks">
 
-                <a href='https://vk.com/yell1k' target="_blank">
+                <!-- vc -->
+                <a href='https://vk.com/yell1k' target="_blank" class='ac-1 wow'>
                     <div class="social-network">
                         <i class="fa fa-vk" aria-hidden="true"></i>
                     </div>
                 </a>
-                <a href='https://vk.com/yell1k' target="_blank">
+
+                <!-- github -->
+                <a href='https://github.com/yellick' target="_blank" class='ac-2 wow'>
                     <div class="social-network">
-                        <i class="fa fa-vk" aria-hidden="true"></i>
-                    </div>
-                </a>
-                <a href='https://vk.com/yell1k' target="_blank">
-                    <div class="social-network">
-                        <i class="fa fa-vk" aria-hidden="true"></i>
-                    </div>
-                </a>
-                <a href='https://vk.com/yell1k' target="_blank">
-                    <div class="social-network">
-                        <i class="fa fa-vk" aria-hidden="true"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
                     </div>
                 </a>
 
@@ -401,6 +399,7 @@
     </main>
 
     <script src='js/jquery-3.6.0.min.js'></script>
+    <script src='js/jquery.magnific-popup.min.js'></script>
     <script src='js/wow.min.js'></script>
     <script src='js/data.js'></script>
     <script src='js/script.js'></script>
