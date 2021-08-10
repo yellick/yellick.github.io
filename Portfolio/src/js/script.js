@@ -17,20 +17,20 @@ function caseSort() {
 
         // перебираю классы у всех проектов
         data['projects'].forEach((item, i, arr) => {
-            
+
             // переменная определяющая, будет ли добавлен данный кейс
             let addendum = false;
-                        
+
             // если введённый тип есть в списке то добавляю элемент на страницу
-            item['class'].forEach((item) => {
+            item['class'].forEach((item, i) => {
                 if (type == item) {
-                     addendum = true;
+                    addendum = true;
                 }
             });
-            
+
             // не в теле forEach потому что и так работает, а в forEach нужно переделывать
             if (addendum) {
-                
+
                 // создаю элементы
                 let Case = document.createElement('div');
                 let caseFill = document.createElement('div');
@@ -46,6 +46,7 @@ function caseSort() {
                 caseTitle.classList.add('case-title');
                 caseType.classList.add('case-type');
                 caseBtn.classList.add('case-btn');
+                caseBtnLink.classList.add('case-btn-link');
                 Case.classList.add('case');
 
                 // даю некоторым элементам значение из data
@@ -55,7 +56,7 @@ function caseSort() {
 
                 // item это элемент массива projects
                 $(Case).css('background', item['bg']);
-                caseBtnLink.setAttribute('href', item['href']);
+                caseBtnLink.setAttribute('onclick', 'enableSlider(' + i + ')');
 
                 // добавляю элементы на страницу
                 Case.appendChild(caseFill);
@@ -68,7 +69,7 @@ function caseSort() {
             }
         });
     };
-    
+
     // удаляю активный класс у всех кнопок
     function activeClass() {
         $('.cases-btn').removeClass('case-btn-active');
@@ -114,7 +115,7 @@ function caseSort() {
     });
 
     casesCount('all')
-}
+};
 
 // создаю блоки блога
 data['blog'].forEach((item, i) => {
@@ -139,7 +140,6 @@ data['blog'].forEach((item, i) => {
 
     //blogBlock.setAttribute('onclick', 'completionBlogPage(' + i + ')');
     blogBlock.setAttribute('href', item['link']);
-    blogBlock.setAttribute('target', '_blank');
     blogBlockImg.setAttribute('src', item['img'])
 
 
@@ -194,9 +194,10 @@ $('.menu-btn').on('click', function (e) {
     // отменяю событие перехода по ссылкке
     e.preventDefault();
     // добавляю кнопке класс делающей её "крестиком"
-    $(this).toggleClass('menu-btn_active');
+    $('.menu-btn').toggleClass('menu-btn_active');
     // отображаю заливку страницы с помощью класса
     $('.fill').toggleClass('fill-active');
+    $('body').css('overflow', 'hidden')
     // выдвигаю сайдбар меню
     $('.sidebar-menu').toggleClass('sidebar-menu-show');
 });
@@ -207,6 +208,7 @@ $('.fill').on('click', function () {
     $('.menu-btn').toggleClass('menu-btn_active');
     // убираю заливку
     $('.fill').toggleClass('fill-active');
+    $('body').css('overflow', 'visible')
     // задвигаю сайдбар
     $('.sidebar-menu').toggleClass('sidebar-menu-show');
 });
@@ -216,14 +218,17 @@ $('.sidebar-menu_item').on('click', function () {
     $('.menu-btn').toggleClass('menu-btn_active');
     // убираю заливку
     $('.fill').toggleClass('fill-active');
+    $('body').css('overflow', 'visible')
     // задвигаю сайдбар
     $('.sidebar-menu').toggleClass('sidebar-menu-show');
 });
 
 // заполнение шкалы навыков
 function intObs() {
-    
-    let options = {threshole: [0]};
+
+    let options = {
+        threshole: [0]
+    };
     let observer = new IntersectionObserver(onEntry, options);
     let elements = $('.about-my-skills');
 
@@ -262,14 +267,14 @@ function intObs() {
 };
 
 // отмена функции при отправке формы и вызов алерт
-$('form').submit(function(e) {
+$('form').submit(function (e) {
     e.preventDefault();
-    
+
     $.ajax({
         type: 'POST',
         url: 'php/mail.php',
         data: $(this).serialize()
-    }).done(function(){
+    }).done(function () {
         $('.contact-form').find('input').val('');
         $('.contact-form').find('textarea').val('');
         alert('Спасибо за сообщение, оно успешно доставлено!  :)')
@@ -277,5 +282,87 @@ $('form').submit(function(e) {
     return false
 });
 
+// размер модального окна
+if (window.screen.width >= 768) {
+    $('.case-modal').width($('.case-modal').height());
+}
+
+// высчитываюю высоту эллементов модалки
+// размеры слайдера
+$('#case-modal-slider').height(($('#case-modal-slider').width() / 2))
+//размеры контента
+$('#case-modal-content').height(($('.case-modal').height() - $('#case-modal-slider').height() - 100))
+
+// модалка в портфолио
+function enableSlider(num) {
+
+    let casesData = data['projects'][num];
+
+    // переменные для слайдера
+    let index = 0;
+    let img = document.getElementById('modal-img');
+    let counter = document.getElementById('counter');
+
+    // переменные для заполнения окна
+    let client = document.getElementById('client');
+    let price = document.getElementById('price');
+    let caseLink1 = document.getElementById('case-link1');
+    let caseLink2 = document.getElementById('case-link2');
+    let aboutProjectTitle = document.getElementById('about-project-title');
+    let aboutProjectP = document.getElementById('about-project-p');
+
+    // заполняю контент и аттрибуты
+    client.textContent = casesData['modal']['client'];
+    client.setAttribute('href',casesData['modal']['clientLink']);
+    price.textContent = casesData['modal']['price'];
+    counter.textContent = index + 1 + '/' + casesData['modal']['images'].length;
+    aboutProjectTitle.textContent = casesData['modal']['projectName'];
+    aboutProjectP.textContent = casesData['modal']['aboutProject'];
+    caseLink1.setAttribute('href', casesData['modal']['link'])
+    caseLink2.setAttribute('href', casesData['modal']['link'])
+    img.setAttribute('src', casesData['modal']['images'][index]);
+    img.setAttribute('href', casesData['modal']['images'][index]);
+    img.classList.add('image-link');
+    
+    // модалка с картинками
+    $('.image-link').magnificPopup({type: 'image'});
+    
+    // переключатели
+    // следующая картинка
+    $('#left-arrow').on('click', function () {
+        index--;
+
+        if (index < 0) {
+            index = casesData['modal']['images'].length - 1;
+        }
+
+        counter.textContent = index + 1 + '/' + casesData['modal']['images'].length
+
+        img.setAttribute('src', casesData['modal']['images'][index]);
+    });
+    // предыдущая картинка
+    $('#right-arrow').on('click', function () {
+        index++;
+
+        if (index > casesData['modal']['images'].length - 1) {
+            index = 0;
+        }
+
+        counter.textContent = index + 1 + '/' + casesData['modal']['images'].length
+
+        img.setAttribute('src', casesData['modal']['images'][index]);
+    });
+}
+
 intObs();
 caseSort();
+
+// открытие и закрытие модального окна
+$('#close-btn').on('click', function () {
+    $('.case-modal-wrap').toggleClass('case-modal-active');
+    $('body').css('overflow', 'visible')
+});
+$('.case-btn-link').on('click', function () {
+    $('.case-modal-wrap').toggleClass('case-modal-active');
+    $('body').css('overflow', 'hidden')
+});

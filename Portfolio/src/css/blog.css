@@ -45,6 +45,31 @@ main {
     margin: auto;
 }
 
+#back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    font-size: 30px;
+    color: #515151;
+    background: #fdfff2;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: all .3s;
+}
+
+#back-btn:hover {
+    transform: scale(1.06);
+}
+
+#back-btn:active {
+    transform: scale(.97);
+}
+
 .content {
     padding: 20px;
     text-align: left;

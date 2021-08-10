@@ -28,6 +28,7 @@ html {
 body {
     font-size: 12px;
     height: 100%;
+    overflow: visible;
 }
 
 a,
@@ -110,24 +111,42 @@ ul {
 
 .fill {
     position: fixed;
+    top: 0;
+    left: -100%;
     width: 100%;
-    height: 100%;
+    height: 150%;
     z-index: 11;
     background-color: rgba(0, 0, 0, .2);
     display: none;
+    opacity: 0;
     transition: all 3s;
 }
 
 .fill-active {
     display: block;
+    left: 0;
+    opacity: 1;
+    -webkit-animation: showFill .5s;
+    -o-animation: showFill .5s;
+    animation: showFill .5s;
+}
+
+@keyframes showFill{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .sidebar-menu {
-    height: 100%;
+    height: 150%;
     position: fixed;
     z-index: 12;
     background-color: #1b242f;
     padding: 40px;
+    top: 0;
     left: -100%;
     transition: all 0.3s;
 }
@@ -404,7 +423,7 @@ nav ul li:hover {
     height: 30px;
     text-align: center;
     line-height: 30px;
-    background-color: #04c2c9;
+    background-color: #0e969b;
     float: left;
 }
 
@@ -465,11 +484,267 @@ nav ul li:hover {
     padding-bottom: 100px;
 }
 
+.case-modal-wrap {
+    position: fixed;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    left: -100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.case-modal {
+    background-color: #fff;
+    height: 100%;
+}
+
+.case-modal-active {
+    left: 0;
+    opacity: 1;
+}
+
+.case-modal-slider {
+    position: relative;
+    width: 100%;
+    background-color: #eee;
+    display: block;
+}
+
+#modal-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+}
+
+#left-arrow {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .2);
+    color: #eee;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+}
+
+#left-arrow i {
+    position: relative;
+    left: -3px;
+}
+
+#right-arrow {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .2);
+    color: #eee;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+}
+
+#right-arrow i {
+    position: relative;
+    left: 3px;
+}
+
+.case-modal-content {
+    width: 100%;
+    height: 30%;
+    padding: 20px;
+    color: #616161;
+    font-size: 12pt;
+}
+
+.about-order {
+    width: 35%;
+    float: left;
+    max-height: 40%
+}
+
+.about-order-cont {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-order-cont p {
+    margin: 0;
+}
+
+.about-project {
+    width: 60%;
+    float: left;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.modal-title {
+    font-size: 16pt;
+    color: #4d4d4d;
+    font-weight: 600;
+}
+
+#client {
+    color: #1ba4a4;
+}
+
+.case-modal-footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#case-link1 {
+    width: 80%;
+    height: 40px;
+    border: 3px solid #e31b6d;
+    background: none;
+    color: #1b242f;
+    font-size: 12pt;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#case-link2 {
+    margin-right: auto;
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    border: 3px solid #e31b6d;
+    background: none;
+    color: #1b242f;
+    font-size: 12pt;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all .5s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-btn {
+    margin-left: auto;
+    margin-right: 20px;
+    width: 150px;
+    height: 40px;
+    border: 3px solid #f00;
+    background: none;
+    color: #1b242f;
+    font-size: 12pt;
+    font-weight: 700;
+    overflow: hidden;
+    transition: all .5s;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    #close-btn:hover {
+        background: #f00;
+        color: #fff;
+    }
+
+    #case-link1:hover {
+        background-color: #e31b6d;
+        color: #fff;
+    }
+    
+    #case-link2:hover {
+        background-color: #e31b6d;
+        color: #fff;
+    }
+}
+
+@media (max-width: 767px) {
+    .case-modal {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 568px) {
+    .about-order {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .about-project {
+        height: 70%;
+        width: 100%;
+    }
+
+    .case-modal-content {
+        height: 50%;
+    }
+
+    .about-order-cont {
+        float: left;
+        height: 100%;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 500px) {
+    #case-link1 {
+        display: none;
+    }
+    #case-link2 {
+        display: flex;
+    }
+}
+
+
 .cases-btns {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
     width: 100%;
+}
+
+.counter {
+    width: 40px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    color: #eee;
+    text-align: center;
+}
+
+.counter p {
+    letter-spacing: 3px;
+    font-size: 12pt;
+    margin: 0;
+    line-height: 25px;
+    font-weight: 500;
 }
 
 .cases-btn {
@@ -566,11 +841,20 @@ nav ul li:hover {
     color: #e31b6d;
 }
 
+.case-btn-link {
+    display: inline-block;
+    margin: 0;
+    width: 150px;
+    height: 40px;
+    transition: all .5s;
+}
+
 .case-btn {
     margin: 0;
     width: 150px;
     height: 40px;
     border: 2px solid #e31b6d;
+    background: none;
     color: #1b242f;
     opacity: 0;
     transition: all .5s;
@@ -614,9 +898,11 @@ nav ul li:hover {
     #cases {
         width: 100%;
     }
+
     .cases {
         padding-bottom: 0;
     }
+
     .case {
         width: 100%;
     }
@@ -709,6 +995,7 @@ nav ul li:hover {
         box-shadow: 8px 5px 5px rgba(0, 0, 0, .3);
         transform: scale(1.02);
     }
+
     .blog-block:hover .blog-block-title {
         color: #04c2c9;
     }
@@ -726,6 +1013,7 @@ nav ul li:hover {
         width: 90%;
         text-align: left;
     }
+
     #blogs {
         text-align: center;
     }
@@ -736,14 +1024,30 @@ nav ul li:hover {
 
 .contact {
     background-color: #252934;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 100px;
     text-align: center;
 }
 
+.contact-information {
+    width: 100%;
+    margin: 5px 0 20px;
+}
+
+.contact-information span {
+    color: #fff;
+    font-size: 12pt;
+    margin: 0 15px;
+}
+
+.contact .sect-title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
 .contact .sect-title p {
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .contact .sect-title .underline {
@@ -754,7 +1058,7 @@ nav ul li:hover {
     color: #04c2c9;
     font-weight: 600;
     font-size: 12pt;
-    margin: 0 0 30px 0;
+    margin: 10px 0 20px 0;
 }
 
 .contact form {
@@ -903,9 +1207,9 @@ footer .go-top:hover i {
 
 #cases {
     position: relative;
-    -webkit-animation: showCases 2s;
-    -o-animation: showCases 2s;
-    animation: showCases 2s;
+    -webkit-animation: showCases 1.5s;
+    -o-animation: showCases 1.5s;
+    animation: showCases 1.5s;
 }
 
 .about-my-skills {
@@ -920,76 +1224,6 @@ footer .go-top:hover i {
     -webkit-animation: aboutMeMove 1.3s;
     -o-animation: aboutMeMove 1.3s;
     animation: aboutMeMove 1.3s;
-}
-
-.skillHtmlScale {
-    width: 90%;
-    -webkit-animation: skillHtmlScaleMove 2.5s;
-    -o-animation: skillHtmlScaleMove 2.5s;
-    animation: skillHtmlScaleMove 2.5s;
-}
-
-.skillCssScale {
-    width: 90%;
-    -webkit-animation: skillCssScaleMove 2.5s;
-    -o-animation: skillCssScaleMove 2.5s;
-    animation: skillCssScaleMove 2.5s;
-}
-
-.skillJsScale {
-    width: 80%;
-    -webkit-animation: skillJsScaleMove 2.5s;
-    -o-animation: skillJsScaleMove 2.5s;
-    animation: skillJsScaleMove 2.5s;
-}
-
-.skillReactScale {
-    width: 80%;
-    -webkit-animation: skillReactScaleMove 2.5s;
-    -o-animation: skillReactScaleMove 2.5s;
-    animation: skillReactScaleMove 2.5s;
-}
-
-.skillAngularScale {
-    width: 50%;
-    -webkit-animation: skillAngularScaleMove 2.5s;
-    -o-animation: skillAngularScaleMove 2.5s;
-    animation: skillAngularScaleMove 2.5s;
-}
-
-.skillNodeScale {
-    width: 65%;
-    -webkit-animation: skillNodeScaleMove 2.5s;
-    -o-animation: skillNodeScaleMove 2.5s;
-    animation: skillNodeScaleMove 2.5s;
-}
-
-.skillRubyScale {
-    width: 65%;
-    -webkit-animation: skillRubyScaleMove 2.5s;
-    -o-animation: skillRubyScaleMove 2.5s;
-    animation: skillRubyScaleMove 2.5s;
-}
-
-.skillDesignScale {
-    width: 50%;
-    -webkit-animation: skillDesignScaleMove2.5s;
-    -o-animation: skillDesignScaleMove 2.5s;
-    animation: skillDesignScaleMove 2.5s;
-}
-
-.skillPhotoshopScale {
-    width: 65%;
-    -webkit-animation: skillPhotoshopScaleMove 2.5s;
-    -o-animation: skillPhotoshopScaleMove 2.5s;
-    animation: skillPhotoshopScaleMove 2.5s;
-}
-
-.skillSketchScale {
-    width: 50%;
-    -webkit-animation: skillSketchScaleMove 2.5s;
-    -o-animation: skillSketchScaleMove 2.5s;
-    animation: skillSketchScaleMove 2.5s;
 }
 
 .contact form {
@@ -1171,12 +1405,12 @@ footer .go-top:hover i {
     @keyframes showCases {
         0% {
             opacity: 0;
-            top: 200px;
+            top: 100px;
         }
 
         50% {
             opacity: 0;
-            top: 200px;
+            top: 100px;
         }
 
         100% {
@@ -1218,6 +1452,14 @@ footer .go-top:hover i {
 
 /* заполнение шкалы навыков */
 /* HTML */
+
+.skillHtmlScale {
+    width: 70%;
+    -webkit-animation: skillHtmlScaleMove 2.5s;
+    -o-animation: skillHtmlScaleMove 2.5s;
+    animation: skillHtmlScaleMove 2.5s;
+}
+
 @keyframes skillHtmlScaleMove {
     0% {
         width: 0;
@@ -1228,11 +1470,18 @@ footer .go-top:hover i {
     }
 
     80% {
-        width: 90%;
+        width: 70%;
     }
 }
 
 /* CSS */
+.skillCssScale {
+    width: 70%;
+    -webkit-animation: skillCssScaleMove 2.5s;
+    -o-animation: skillCssScaleMove 2.5s;
+    animation: skillCssScaleMove 2.5s;
+}
+
 @keyframes skillCssScaleMove {
     0% {
         width: 0;
@@ -1243,11 +1492,18 @@ footer .go-top:hover i {
     }
 
     82% {
-        width: 90%;
+        width: 70%;
     }
 }
 
 /* JS */
+.skillJsScale {
+    width: 60%;
+    -webkit-animation: skillJsScaleMove 2.5s;
+    -o-animation: skillJsScaleMove 2.5s;
+    animation: skillJsScaleMove 2.5s;
+}
+
 @keyframes skillJsScaleMove {
     0% {
         width: 0;
@@ -1258,12 +1514,18 @@ footer .go-top:hover i {
     }
 
     84% {
-        width: 80%;
+        width: 60%;
     }
 }
 
-/* React */
-@keyframes skillReactScaleMove {
+/* Design */
+.skillDesignScale {
+    width: 50%;
+    -webkit-animation: skillDesignScaleMove2.5s;
+    -o-animation: skillDesignScaleMove 2.5s;
+    animation: skillDesignScaleMove 2.5s;
+}
+@keyframes skillDesignScaleMove {
     0% {
         width: 0;
     }
@@ -1273,12 +1535,18 @@ footer .go-top:hover i {
     }
 
     86% {
-        width: 80%;
+        width: 50%;
     }
 }
 
-/* Angular */
-@keyframes skillAngularScaleMove {
+/* Photoshop */
+.skillPhotoshopScale {
+    width: 40%;
+    -webkit-animation: skillPhotoshopScaleMove 2.5s;
+    -o-animation: skillPhotoshopScaleMove 2.5s;
+    animation: skillPhotoshopScaleMove 2.5s;
+}
+@keyframes skillPhotoshopScaleMove {
     0% {
         width: 0;
     }
@@ -1288,81 +1556,6 @@ footer .go-top:hover i {
     }
 
     88% {
-        width: 50%;
-    }
-}
-
-/* Node.js */
-@keyframes skillNodeScaleMove {
-    0% {
-        width: 0;
-    }
-
-    60% {
-        width: 0;
-    }
-
-    90% {
-        width: 65%;
-    }
-}
-
-/* Ruby */
-@keyframes skillRubyScaleMove {
-    0% {
-        width: 0;
-    }
-
-    62% {
-        width: 0;
-    }
-
-    92% {
-        width: 65%;
-    }
-}
-
-/* Design */
-@keyframes skillDesignScaleMove {
-    0% {
-        width: 0;
-    }
-
-    64% {
-        width: 0;
-    }
-
-    94% {
-        width: 50%;
-    }
-}
-
-/* Photoshop */
-@keyframes skillPhotoshopScaleMove {
-    0% {
-        width: 0;
-    }
-
-    66% {
-        width: 0;
-    }
-
-    96% {
-        width: 65%;
-    }
-}
-
-/* Sketch */
-@keyframes skillSketchScaleMove {
-    0% {
-        width: 0;
-    }
-
-    68% {
-        width: 0;
-    }
-
-    98% {
-        width: 50%;
+        width: 40%;
     }
 }
