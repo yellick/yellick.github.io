@@ -25,5 +25,5 @@ $('.fill').on('click', function () {
     setTimeout(() => {
         // убираю заливку
         $('.fill').toggleClass('fill--active');
-    }, 300)
+    }, 200)
 });
