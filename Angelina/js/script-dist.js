@@ -1,7 +1,10 @@
 $(document).ready(() => {
     $('.preloader').addClass('preloader-hiden');
-    setTimeout(() => {$('.preloader').css('display', 'none')}, 500);
+    setTimeout(() => {
+        $('.preloader').css('display', 'none')
+    }, 500);
 });
+
 
 // активация кнопки меню
 // функция по нажатию на кнопку
@@ -66,3 +69,96 @@ $(window).scroll(() => {
         };
     });
 });
+
+
+
+function slider() {
+
+
+    let data = [
+        {
+            image: 'img/car.jpg',
+            name: 'Каршеринг'
+        },
+        {
+            image: 'img/dala_dala.jpg',
+            name: 'Дала-Дала (маршрутка)'
+        },
+        {
+            image: 'img/taxi.jpg',
+            name: 'Такси'
+        },
+    ];
+
+    let index = 0;
+
+    // добавляю точки в слайдер
+    function dotsCount() {
+
+        // узнаю кол-во элементов слайдера
+        let countElement = data.length;
+
+        for (let i = 1; i <= countElement; i++) {
+
+            let dots = document.getElementById('dots');
+
+            let dot = document.createElement('div');
+            dot.classList.add('slider__management__dots__dot');
+
+            dots.appendChild(dot);
+        }
+    };
+
+    function sliderContent(index) {
+        let img = document.getElementById('slider_img');
+        let text = document.getElementById('slider_text');
+        img.setAttribute('src', data[index]['image']);
+        text.textContent = data[index]['name'];
+    }
+
+    function changeActiveDot() {
+        let dots = document.getElementsByClassName('slider__management__dots__dot');
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('slider__management__dots__dot--active')
+        };
+
+        dots[index].classList.add('slider__management__dots__dot--active')
+    }
+
+
+    let btnPrev = document.getElementById('slider__management__btn__prev');
+    let btnNext = document.getElementById('slider__management__btn__next');
+
+    $(btnPrev).click(() => {
+
+        if (index == 0) {
+            index = data.length - 1;
+            sliderContent(index)
+            changeActiveDot()
+        } else {
+            index--;
+            sliderContent(index)
+            changeActiveDot()
+        }
+    })
+
+    $(btnNext).click(() => {
+        if (index == data.length - 1) {
+            index = 0;
+            sliderContent(index)
+            changeActiveDot()
+        } else {
+            index++;
+            sliderContent(index)
+            changeActiveDot()
+        }
+    })
+
+
+    dotsCount()
+    sliderContent(index)
+    changeActiveDot()
+}
+
+slider()
