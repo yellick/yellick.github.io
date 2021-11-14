@@ -5,7 +5,6 @@ $(document).ready(() => {
     }, 500);
 });
 
-
 // активация кнопки меню
 // функция по нажатию на кнопку
 $('.menu-btn').on('click', function (e) {
@@ -54,7 +53,7 @@ $('a[href^="#"]').click(function () {
 // изменение активного пункта меню
 $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
-
+    
     $('.paragraph').each((i, el) => {
         if ($(el).offset().top - $('header').outerHeight() <= scrollDistance + ($(window).height() * 0.5)) {
 
@@ -68,10 +67,15 @@ $(window).scroll(() => {
             $('nav a:eq(' + i + ')').find('span').addClass('menu_item--active');
         };
     });
+    
+    if (scrollDistance >= $('.title').height()) {
+        $('.header').addClass('header--active')
+    } else if (scrollDistance <= 400) {
+        $('.header').removeClass('header--active')
+    };
 });
 
-
-
+// работа слайдера
 function slider() {
 
 
