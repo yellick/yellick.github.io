@@ -20,6 +20,7 @@ $('.menu-btn--c').on('click', function(){
     $('.menu-btn').removeClass('menu-btn_active');
     $('.menu').removeClass('menu--show');
     $('.fill').css('opacity', '0');
+    $('.fill').removeClass('fill--active');
 });
 // деактивация кнопки меню
 // функция по нажатию на заливку
