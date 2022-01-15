@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Main.cfg</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="title">
+        <p class="title__page-title">Файл main.cfg</p>
+        <hr>
+    </div>
+
+    <main>
+        <div class="container">
+
+            <div class="container__cfg">
+                unbindall;<br>
+                bind "0" "incrementvar net_graph 0 1 1";<br>
+                bind "1" "slot1";<br>
+                bind "2" "slot2";<br>
+                bind "3" "slot3";<br>
+                bind "4" "slot4";<br>
+                bind "5" "use weapon_c4; drop;";<br>
+                bind "6" "slot5";<br>
+                bind "7" "slot12";<br>
+                bind "9" "slot9";<br>
+                bind "a" "+moveleft";<br>
+                bind "b" "buymenu";<br>
+                bind "c" "slot10";<br>
+                bind "d" "+moveright";<br>
+                bind "e" "+use";<br>
+                bind "f" "+lookatweapon";<br>
+                bind "g" "drop";<br>
+                bind "h" "host_timescale 1";<br>
+                bind "j" "+print";<br>
+                bind "k" "sm_spray";<br>
+                bind "l" "toggledetector";<br>
+                bind "m" "teammenu";<br>
+                bind "n" "host_timescale 0.3";<br>
+                bind "q" "lastinv";<br>
+                bind "r" "+reload";<br>
+                bind "s" "+back";<br>
+                bind "t" "+spray_menu";<br>
+                bind "u" "messagemode2";<br>
+                bind "v" "slot7";<br>
+                bind "w" "+forward";<br>
+                bind "x" "slot6";<br>
+                bind "y" "messagemode";<br>
+                bind "z" "radio";<br>
+                bind "KP_INS" "cl_crosshaircolor_r 255; cl_crosshaircolor_g 0; cl_crosshaircolor_b 0";<br>
+                bind "KP_END" "cl_crosshaircolor_g 255; cl_crosshaircolor_r 0; cl_crosshaircolor_b 0";<br>
+                bind "KP_DOWNARROW" "cl_crosshaircolor_r 255; cl_crosshaircolor_g 200; cl_crosshaircolor_b 0";<br>
+                bind "KP_PGDN" "cl_crosshaircolor_r 0; cl_crosshaircolor_g 255; cl_crosshaircolor_b 255";<br>
+                bind "KP_LEFTARROW" "incrementvar cl_crosshairgap -4 0 1";<br>
+                bind "KP_5" "incrementvar cl_crosshairsize 1 3 0.5";<br>
+                bind "KP_RIGHTARROW" "incrementvar cl_crosshairstyle 4 5 1";<br>
+                bind "KP_HOME" "incrementvar viewmodel_offset_x -2 2.5 0.5";<br>
+                bind "KP_UPARROW" "incrementvar viewmodel_offset_y -2 2 0.5";<br>
+                bind "KP_PGUP" "incrementvar viewmodel_offset_z -2 2 0.5";<br>
+                bind "KP_SLASH" "mp_roundtime 60; mp_restartgame 1";<br>
+                bind "KP_MINUS" "sv_airaccelerate 100;sv_autobunnyhopping 1;sv_enablebunnyhopping 1;sv_maxspeed 1000 ;sv_staminajumpcost 0;sv_staminalandcost 0;";<br>
+                bind "KP_PLUS" "incrementvar cl_crosshairdot 0 1 1";<br>
+                bind "KP_DEL" "cl_crosshaircolor_r 255; cl_crosshaircolor_g 255; cl_crosshaircolor_b 255";<br>
+                bind "[" "invprev";<br>
+                bind "]" "clutch_mode_toggle";<br>
+                bind "`" "toggleconsole";<br>
+                bind "," "buy primammo";<br>
+                bind "/" "+movedown";<br>
+                bind "\" "sv_rethrow_last_grenade";<br>
+                bind "-" "sizedown";<br>
+                bind "=" "sizeup";<br>
+                bind "SPACE" "+jump";<br>
+                bind "TAB" "+showscores";<br>
+                bind "ESCAPE" "cancelselect";<br>
+                bind "INS" "+klook";<br>
+                bind "HOME" "exec unsmoked";<br>
+                bind "END" "centerview";<br>
+                bind "PGUP" "+lookup";<br>
+                bind "PGDN" "+lookdown";<br>
+                bind "PAUSE" "pause";<br>
+                bind "SHIFT" "+speed;r_cleardecals";<br>
+                bind "ALT" "noclip";<br>
+                bind "RALT" "player_ping";<br>
+                bind "CTRL" "+duck";<br>
+                bind "LEFTARROW" "+left";<br>
+                bind "F2" "askconnect_accept";<br>
+                bind "F3" "autobuy";<br>
+                bind "F4" "rebuy";<br>
+                bind "F5" "jpeg";<br>
+                bind "F10" "quit prompt";<br>
+                bind "MOUSE1" "+attack";<br>
+                bind "MOUSE2" "+attack2";<br>
+                bind "MOUSE3" "toggle cl_righthand 0 1";<br>
+                bind "MOUSE4" "slot8";<br>
+                bind "MOUSE5" "+voicerecord";<br>
+                bind "MWHEELUP" "+jump";<br>
+                bind "MWHEELDOWN" "+jump";<br>
+                <br>
+                <br>
+                @panorama_debug_overlay_opacity "0.8";<br>
+                adsp_debug "0";<br>
+                ai_report_task_timings_on_limit "0";<br>
+                ai_think_limit_label "0";<br>
+                budget_averages_window "30";<br>
+                budget_background_alpha "128";<br>
+                budget_bargraph_background_alpha "128";<br>
+                budget_bargraph_range_ms "16.6666666667";<br>
+                budget_history_numsamplesvisible "100";<br>
+                budget_history_range_ms "66.666666667";<br>
+                budget_panel_bottom_of_history_fraction ".25";<br>
+                budget_panel_height "384";<br>
+                budget_panel_width "512";<br>
+                budget_panel_x "0";<br>
+                budget_panel_y "50";<br>
+                budget_peaks_window "30";<br>
+                budget_show_averages "0";<br>
+                budget_show_history "1";<br>
+                budget_show_peaks "1";<br>
+                bugreporter_uploadasync "0";<br>
+                bugreporter_username "";<br>
+                c_maxdistance "200";<br>
+                c_maxpitch "90";<br>
+                c_maxyaw "135";<br>
+                c_mindistance "30";<br>
+                c_minpitch "0";<br>
+                c_minyaw "-135";<br>
+                c_orthoheight "100";<br>
+                c_orthowidth "100";<br>
+                c_thirdpersonshoulder "false";<br>
+                c_thirdpersonshoulderaimdist "120.0";<br>
+                c_thirdpersonshoulderdist "40.0";<br>
+                c_thirdpersonshoulderheight "5.0";<br>
+                c_thirdpersonshoulderoffset "20.0";<br>
+                cachedvalue_count_partybrowser "1629972756";<br>
+                cachedvalue_count_teammates "1630222384";<br>
+                cam_collision "1";<br>
+                cam_idealdelta "4.0";<br>
+                cam_idealdist "150";<br>
+                cam_idealdistright "0";<br>
+                cam_idealdistup "0";<br>
+                cam_ideallag "4.0";<br>
+                cam_idealpitch "0";<br>
+                cam_idealyaw "1";<br>
+                cam_snapto "0";<br>
+                cc_lang "SmartHud";<br>
+                cc_linger_time "1.0";<br>
+                cc_predisplay_time "0.25";<br>
+                cc_subtitles "0";<br>
+                chet_debug_idle "0";<br>
+                cl_allowdownload "1";<br>
+                cl_allowupload "1";<br>
+                cl_autohelp "0";<br>
+                cl_autowepswitch "0";<br>
+                cl_bob_lower_amt "5";<br>
+                cl_bobamt_lat "0.1";<br>
+                cl_bobamt_vert "0.1";<br>
+                cl_bobcycle "0.98";<br>
+                cl_buywheel_donate_key "0";<br>
+                cl_buywheel_nomousecentering "0";<br>
+                cl_buywheel_nonumberpurchasing "0";<br>
+                cl_chatfilter_version "1";<br>
+                cl_chatfilters "63";<br>
+                cl_clanid "0";<br>
+                cl_cmdrate "64.000000";<br>
+                cl_color "0";<br>
+                cl_compass_enabled "1";<br>
+                <br>
+                <br>
+                cl_crosshair_drawoutline "0";<br>
+                cl_crosshair_dynamic_maxdist_splitratio "0.300000";<br>
+                cl_crosshair_dynamic_splitalpha_innermod "1";<br>
+                cl_crosshair_dynamic_splitalpha_outermod "0.500000";<br>
+                cl_crosshair_dynamic_splitdist "7";<br>
+                cl_crosshair_friendly_warning "1";<br>
+                cl_crosshair_outlinethickness "1.000000";<br>
+                cl_crosshair_sniper_show_normal_inaccuracy "0";<br>
+                cl_crosshair_sniper_width "1";<br>
+                cl_crosshair_t "0";<br>
+                cl_crosshairalpha "255";<br>
+                cl_crosshaircolor "5";<br>
+                cl_crosshaircolor_b "0";<br>
+                cl_crosshaircolor_g "200";<br>
+                cl_crosshaircolor_r "255";<br>
+                cl_crosshairdot "0.000000";<br>
+                cl_crosshairgap "-3.000000";<br>
+                cl_crosshairgap_useweaponvalue "0";<br>
+                cl_crosshairsize "1.500000";<br>
+                cl_crosshairstyle "4.000000";<br>
+                cl_crosshairthickness "0.500000";<br>
+                cl_crosshairusealpha "1";<br>
+                <br>
+                <br>
+                cl_debugrumble "0";<br>
+                cl_detail_avoid_force "0.4";<br>
+                cl_detail_avoid_radius "64";<br>
+                cl_detail_avoid_recover_speed "0.25";<br>
+                cl_detail_max_sway "5";<br>
+                cl_disable_round_end_report "0";<br>
+                cl_disablefreezecam "1";<br>
+                cl_disablehtmlmotd "0";<br>
+                cl_dm_buyrandomweapons "1";<br>
+                cl_downloadfilter "all";<br>
+                cl_dz_playagain_auto_spectate "0";<br>
+                cl_embedded_stream_audio_volume "60";<br>
+                cl_embedded_stream_audio_volume_xmaster "1";<br>
+                cl_fixedcrosshairgap "3.000000";<br>
+                cl_forcepreload "1";<br>
+                cl_freezecampanel_position_dynamic "1";<br>
+                cl_grass_mip_bias "-0.5";<br>
+                cl_hide_avatar_images "0";<br>
+                <br>
+                <br>
+                cl_hud_background_alpha "1.000000";<br>
+                cl_hud_bomb_under_radar "1";<br>
+                cl_hud_color "3";<br>
+                cl_hud_healthammo_style "1";<br>
+                cl_hud_playercount_pos "1";<br>
+                cl_hud_playercount_showcount "0";<br>
+                cl_hud_radar_scale "1";<br>
+                <br>
+                <br>
+                cl_idealpitchscale "0.8";<br>
+                cl_inventory_saved_filter2 "all";<br>
+                cl_inventory_saved_sort2 "inv_sort_rarity";<br>
+                cl_invites_only_friends "0";<br>
+                cl_invites_only_mainmenu "0";<br>
+                cl_itemimages_dynamically_generated "2";<br>
+                cl_join_advertise "1";<br>
+                cl_minimal_rtt_shadows "1";<br>
+                cl_mouselook "1";<br>
+                cl_mute_all_but_friends_and_party "0";<br>
+                cl_mute_enemy_team "0";<br>
+                cl_obs_interp_enable "1";<br>
+                cl_observed_bot_crosshair "0";<br>
+                cl_observercrosshair "1";<br>
+                cl_parachute_autodeploy "1";<br>
+                cl_ping_fade_deadzone "60";<br>
+                cl_ping_fade_distance "300";<br>
+                cl_player_ping_mute "1";<br>
+                cl_playerspray_auto_apply "1";<br>
+                cl_promoted_settings_acknowledged "1:1613313989879";<br>
+                cl_quickinventory_lastinv "1";<br>
+                cl_quickinventory_line_update_speed "65.0f";<br>
+                <br>
+                <br>
+                cl_radar_always_centered "1";<br>
+                cl_radar_icon_scale_min "0.6";<br>
+                cl_radar_rotate "1";<br>
+                cl_radar_scale "0.7";<br>
+                cl_radar_square_with_scoreboard "1";<br>
+                cl_radial_radio_tab_0_text_1 "#Chatwheel_requestspend";<br>
+                cl_radial_radio_tab_0_text_2 "#Chatwheel_requestweapon";<br>
+                cl_radial_radio_tab_0_text_3 "#Chatwheel_bplan";<br>
+                cl_radial_radio_tab_0_text_4 "#Chatwheel_followingyou";<br>
+                cl_radial_radio_tab_0_text_5 "#Chatwheel_midplan";<br>
+                cl_radial_radio_tab_0_text_6 "#Chatwheel_followme";<br>
+                cl_radial_radio_tab_0_text_7 "#Chatwheel_aplan";<br>
+                cl_radial_radio_tab_0_text_8 "#Chatwheel_requestecoround";<br>
+                cl_radial_radio_tab_1_text_1 "#Chatwheel_enemyspotted";<br>
+                cl_radial_radio_tab_1_text_2 "#Chatwheel_needbackup";<br>
+                cl_radial_radio_tab_1_text_3 "#Chatwheel_bplan";<br>
+                cl_radial_radio_tab_1_text_4 "#Chatwheel_bombcarrierspotted";<br>
+                cl_radial_radio_tab_1_text_5 "#Chatwheel_multipleenemieshere";<br>
+                cl_radial_radio_tab_1_text_6 "#Chatwheel_sniperspotted";<br>
+                cl_radial_radio_tab_1_text_7 "#Chatwheel_aplan";<br>
+                cl_radial_radio_tab_1_text_8 "#Chatwheel_inposition";<br>
+                cl_radial_radio_tab_2_text_1 "#Chatwheel_affirmative";<br>
+                cl_radial_radio_tab_2_text_2 "#Chatwheel_negative";<br>
+                cl_radial_radio_tab_2_text_3 "#Chatwheel_compliment";<br>
+                cl_radial_radio_tab_2_text_4 "#Chatwheel_thanks";<br>
+                cl_radial_radio_tab_2_text_5 "#Chatwheel_cheer";<br>
+                cl_radial_radio_tab_2_text_6 "#Chatwheel_peptalk";<br>
+                cl_radial_radio_tab_2_text_7 "#Chatwheel_sorry";<br>
+                cl_radial_radio_tab_2_text_8 "#Chatwheel_sectorclear";<br>
+                cl_radial_radio_version_reset "12";<br>
+                cl_radialmenu_deadzone_size "0.04";<br>
+                cl_righthand "0";<br>
+                <br>
+                <br>
+                cl_rumblescale "0";<br>
+                cl_sanitize_player_names "0";<br>
+                cl_scoreboard_mouse_enable_binding "+attack2";<br>
+                cl_scoreboard_survivors_always_on "0";<br>
+                cl_show_clan_in_death_notice "1";<br>
+                cl_show_observer_crosshair "2";<br>
+                cl_showhelp "0";<br>
+                cl_showloadout "0";<br>
+                cl_showpluginmessages2 "0";<br>
+                cl_sniper_delay_unscope "0";<br>
+                cl_spec_follow_grenade_key "0";<br>
+                cl_spec_mode "4";<br>
+                cl_tablet_mapmode "1";<br>
+                cl_teamid_overhead_mode "2";<br>
+                cl_teammate_colors_show "1";<br>
+                cl_thirdperson "0";<br>
+                cl_timeout "30";<br>
+                cl_updaterate "64.000000";<br>
+                cl_use_opens_buy_menu "0";<br>
+                cl_versus_intro "1";<br>
+                cl_viewmodel_shift_left_amt "0.5";<br>
+                cl_viewmodel_shift_right_amt "0.25";<br>
+                closecaption "1";<br>
+                closeonbuy "0";<br>
+                commentary_firstrun "0";<br>
+                con_allownotify "1";<br>
+                con_enable "1";<br>
+                crosshair "1";<br>
+                demo_index "0";<br>
+                demo_index_max_other "500";<br>
+                dsp_enhance_stereo "0";<br>
+                engine_no_focus_sleep "50";<br>
+                force_audio_english "0";<br>
+                func_break_max_pieces "15";<br>
+                g15_update_msec "250";<br>
+                gameinstructor_enable "0";<br>
+                hud_scaling "0.866405";<br>
+                hud_showtargetid "1";<br>
+                hud_takesshots "0";<br>
+                joy_accelmax "1.0";<br>
+                joy_accelscale "3.5";<br>
+                joy_accelscalepoly "0.4";<br>
+                joy_advanced "0";<br>
+                joy_advaxisr "0";<br>
+                joy_advaxisu "0";<br>
+                joy_advaxisv "0";<br>
+                joy_advaxisx "0";<br>
+                joy_advaxisy "0";<br>
+                joy_advaxisz "0";<br>
+                joy_autoaimdampen "0";<br>
+                joy_autoAimDampenMethod "0";<br>
+                joy_autoaimdampenrange "0";<br>
+                joy_axisbutton_threshold "0.3";<br>
+                joy_cfg_preset "1";<br>
+                joy_circle_correct "1";<br>
+                joy_curvepoint_1 "0.001";<br>
+                joy_curvepoint_2 "0.4";<br>
+                joy_curvepoint_3 "0.75";<br>
+                joy_curvepoint_4 "1";<br>
+                joy_curvepoint_end "2";<br>
+                joy_diagonalpov "0";<br>
+                joy_display_input "0";<br>
+                joy_forwardsensitivity "-1";<br>
+                joy_forwardthreshold "0.15";<br>
+                joy_gamma "0.2";<br>
+                joy_inverty "0";<br>
+                joy_lowend "1";<br>
+                joy_lowend_linear "0.55";<br>
+                joy_lowmap "1";<br>
+                joy_movement_stick "0";<br>
+                joy_name "joystick";<br>
+                joy_no_accel_jump "0";<br>
+                joy_pitchsensitivity "-1";<br>
+                joy_pitchthreshold "0.15";<br>
+                joy_response_look "0";<br>
+                joy_response_look_pitch "1";<br>
+                joy_response_move "1";<br>
+                joy_sensitive_step0 "0.1";<br>
+                joy_sensitive_step1 "0.4";<br>
+                joy_sensitive_step2 "0.90";<br>
+                joy_sidesensitivity "1";<br>
+                joy_sidethreshold "0.15";<br>
+                joy_wingmanwarrior_centerhack "0";<br>
+                joy_wingmanwarrior_turnhack "0";<br>
+                joy_yawsensitivity "-1";<br>
+                joy_yawthreshold "0.15";<br>
+                joystick "1";<br>
+                joystick_force_disabled "1";<br>
+                joystick_force_disabled_set_from_options "1";<br>
+                key_bind_version "5";<br>
+                lobby_default_privacy_bits2 "0";<br>
+                lockMoveControllerRet "0";<br>
+                lookspring "0";<br>
+                lookstrafe "0";<br>
+                m_customaccel "0";<br>
+                m_customaccel_exponent "1.05";<br>
+                m_customaccel_max "0";<br>
+                m_customaccel_scale "0.04";<br>
+                m_forward "1";<br>
+                m_mouseaccel1 "0";<br>
+                m_mouseaccel2 "0";<br>
+                m_mousespeed "1";<br>
+                m_pitch "0.022";<br>
+                m_rawinput "1";<br>
+                m_side "0.8";<br>
+                m_yaw "0.022";<br>
+                mapoverview_icon_scale "1.0";<br>
+                mat_enable_uber_shaders "1";<br>
+                mat_monitorgamma "1.600000";<br>
+                mat_monitorgamma_tv_enabled "0";<br>
+                mat_powersavingsmode "0";<br>
+                mat_queue_report "0";<br>
+                mat_spewalloc "0";<br>
+                mat_texture_list_content_path "";<br>
+                mc_accel_band_size "0.5";<br>
+                mc_dead_zone_radius "0.06";<br>
+                mc_max_pitchrate "100.0";<br>
+                mc_max_yawrate "230.0";<br>
+                mm_csgo_community_search_players_min "3";<br>
+                mm_dedicated_search_maxping "150.000000";<br>
+                mm_server_search_lan_ports "27015,27016,27017,27018,27019,27020";<br>
+                muzzleflash_light "0";<br>
+                name "Жёлтый";<br>
+                net_allow_multicast "1";<br>
+                net_graph "1";<br>
+                net_graphheight "0";<br>
+                net_graphholdsvframerate "0";<br>
+                net_graphipc "0";<br>
+                net_graphmsecs "400";<br>
+                net_graphpos "180";<br>
+                net_graphproportionalfont "0";<br>
+                net_graphshowinterp "1";<br>
+                net_graphshowlatency "1";<br>
+                net_graphshowsvframerate "0";<br>
+                net_graphsolid "1";<br>
+                net_graphtext "1";<br>
+                net_maxroutable "1200";<br>
+                net_scale "5";<br>
+                net_steamcnx_allowrelay "1";<br>
+                npc_height_adjust "1";<br>
+                option_duck_method "0";<br>
+                option_speed_method "0";<br>
+                password "DE7A69AEA39EF3D7E2DBAA31E5B007DA91470A38FEB005B92860CBA1565F2BF7";<br>
+                play_distance "1";<br>
+                player_botdifflast_s "0";<br>
+                player_competitive_maplist_2v2_9_0_24235B08 "mg_de_vertigo,mg_de_overpass,mg_de_cbble,mg_de_train,mg_de_shortnuke,mg_de_shortdust";<br>
+                player_competitive_maplist_8_9_0_452B2DC "mg_de_mirage";<br>
+                player_nevershow_communityservermessage "1";<br>
+                player_survival_list_9_0_B "mg_dz_blacksite,mg_dz_sirocco,mg_dz_frostbite";<br>
+                player_teamplayedlast "2";<br>
+                player_wargames_list2_9_0_E04 "mg_skirmish_retakes";<br>
+                r_drawmodelstatsoverlaymax "1.5";<br>
+                r_drawmodelstatsoverlaymin "0.1";<br>
+                r_drawtracers_firstperson "1";<br>
+                r_eyegloss "1";<br>
+                r_eyemove "1";<br>
+                r_eyeshift_x "0";<br>
+                r_eyeshift_y "0";<br>
+                r_eyeshift_z "0";<br>
+                r_eyesize "0";<br>
+                r_player_visibility_mode "0";<br>
+                rate "128000.000000";<br>
+                safezonex "1.0";<br>
+                safezoney "1.0";<br>
+                sc_enable "1.0";<br>
+                sc_joystick_map "1";<br>
+                sc_pitch_sensitivity "1.0";<br>
+                sc_yaw_sensitivity "1.0";<br>
+                scene_showfaceto "0";<br>
+                scene_showlook "0";<br>
+                scene_showmoveto "0";<br>
+                scene_showunlock "0";<br>
+                sensitivity "3";<br>
+                sk_autoaim_mode "1";<br>
+                skill "1.000000";<br>
+                snd_deathcamera_volume "0.000000";<br>
+                snd_duckerattacktime "0.5";<br>
+                snd_duckerreleasetime "2.5";<br>
+                snd_duckerthreshold "0.15";<br>
+                snd_ducking_off "1";<br>
+                snd_ducktovolume "0.55";<br>
+                snd_dzmusic_volume "0.2";<br>
+                snd_hrtf_distance_behind "100";<br>
+                snd_hrtf_voice_delay "0.1";<br>
+                snd_hwcompat "0";<br>
+                snd_mapobjective_volume "0.028738";<br>
+                snd_menumusic_volume "0.000000";<br>
+                snd_mix_async "1";<br>
+                snd_mix_async_onetime_reset "1";<br>
+                snd_mixahead "0.025";<br>
+                snd_music_selection "1";<br>
+                snd_music_volume_onetime_reset_2 "1";<br>
+                snd_musicvolume_multiplier_inoverlay "0.000000";<br>
+                snd_mute_losefocus "0";<br>
+                snd_mute_mvp_music_live_players "0";<br>
+                snd_mvp_volume "0.000000";<br>
+                snd_pitchquality "1";<br>
+                snd_roundend_volume "0";<br>
+                snd_roundstart_volume "0";<br>
+                snd_surround_speakers "0";<br>
+                snd_tensecondwarning_volume "0.032170";<br>
+                sound_device_override "{0.0.0.00000000}.{2154e0f3-75d1-4994-ba12-ad096ca8a7eb}";<br>
+                spec_replay_autostart "0";<br>
+                spec_show_xray "0";<br>
+                spec_usenumberkeys_nobinds "1";<br>
+                ss_splitmode "0";<br>
+                store_version "1";<br>
+                suitvolume "0.25";<br>
+                sv_forcepreload "1";<br>
+                sv_log_onefile "0";<br>
+                sv_logbans "0";<br>
+                sv_logecho "1";<br>
+                sv_logfile "1";<br>
+                sv_logflush "0";<br>
+                sv_logsdir "logs";<br>
+                sv_noclipaccelerate "5";<br>
+                sv_noclipspeed "5";<br>
+                sv_pvsskipanimation "1";<br>
+                sv_skyname "sky_cs15_daylight01_hdr";<br>
+                sv_specaccelerate "5";<br>
+                sv_specnoclip "1";<br>
+                sv_specspeed "3";<br>
+                sv_unlockedchapters "1";<br>
+                sv_voiceenable "1";<br>
+                test_convar "0";<br>
+                texture_budget_background_alpha "128";<br>
+                texture_budget_panel_bottom_of_history_fraction ".25";<br>
+                texture_budget_panel_height "284";<br>
+                texture_budget_panel_width "512";<br>
+                texture_budget_panel_x "0";<br>
+                texture_budget_panel_y "450";<br>
+                tr_best_course_time "0";<br>
+                tr_completed_training "0";<br>
+                triple_monitor_mode "0";<br>
+                trusted_launch "1";<br>
+                trusted_launch_once "0";<br>
+                tv_nochat "0";<br>
+                ui_deepstats_radio_heat_figurine "0";<br>
+                ui_deepstats_radio_heat_tab "0";<br>
+                ui_deepstats_radio_heat_team "0";<br>
+                ui_deepstats_toplevel_mode "0";<br>
+                ui_inventorysettings_recently_acknowledged "";<br>
+                ui_mainmenu_bkgnd_movie_8C5FB98B "ancient";<br>
+                ui_nearbylobbies_filter3 "competitive";<br>
+                ui_news_last_read_link "https://blog.counter-strike.net/ru/index.php/2021/08/35163/";<br>
+                ui_playsettings_custom_preset<br>
+                ui_playsettings_maps_listen_casual "mg_de_mirage";<br>
+                ui_playsettings_maps_listen_competitive "mg_de_mirage";<br>
+                ui_playsettings_maps_listen_deathmatch "mg_de_mirage";<br>
+                ui_playsettings_maps_listen_scrimcomp2v2 "mg_de_inferno";<br>
+                ui_playsettings_maps_listen_skirmish "mg_skirmish_flyingscoutsman";<br>
+                ui_playsettings_maps_official_casual "mg_dust247";<br>
+                ui_playsettings_maps_official_deathmatch "mg_dust247";<br>
+                ui_playsettings_maps_workshop "@workshop/2185699891/csgohub_prac";<br>
+                ui_playsettings_mode_listen "competitive";<br>
+                ui_playsettings_mode_official_v20 "competitive";<br>
+                ui_playsettings_survival_solo "0";<br>
+                ui_playsettings_warmup_map_name "de_mirage";<br>
+                ui_popup_weaponupdate_version "3";<br>
+                ui_setting_advertiseforhire_auto "0";<br>
+                ui_setting_advertiseforhire_auto_last "/cooperative";<br>
+                ui_show_subscription_alert "1";<br>
+                ui_show_unlock_competitive_alert "";<br>
+                ui_steam_overlay_notification_position "topleft";<br>
+                ui_vanitysetting_loadoutslot_ct "rifle4";<br>
+                ui_vanitysetting_loadoutslot_t "secondary2";<br>
+                ui_vanitysetting_team "t";<br>
+                vgui_message_dialog_modal "1";<br>
+                <br>
+                <br>
+                viewmodel_fov "68";<br>
+                viewmodel_offset_x "2.500000";<br>
+                viewmodel_offset_y "2.000000";<br>
+                viewmodel_offset_z "-2.000000";<br>
+                viewmodel_presetpos "0";<br>
+                viewmodel_recoil "0";<br>
+                <br>
+                <br>
+                voice_caster_enable "0";<br>
+                voice_caster_scale "0.098428";<br>
+                voice_enable "1";<br>
+                voice_forcemicrecord "1";<br>
+                voice_mixer_boost "0";<br>
+                voice_mixer_mute "0";<br>
+                voice_mixer_volume "1.0";<br>
+                voice_modenable "1";<br>
+                voice_positional "0";<br>
+                voice_scale "0.351222";<br>
+                voice_system_enable "1";<br>
+                voice_threshold "4000";<br>
+                volume "0.470617";<br>
+                vprof_graphheight "256";<br>
+                vprof_graphwidth "512";<br>
+                vprof_unaccounted_limit "0.3";<br>
+                vprof_verbose "1";<br>
+                vprof_warningmsec "10";<br>
+                weapon_accuracy_logging "0";<br>
+                xbox_autothrottle "1";<br>
+                xbox_throttlebias "100";<br>
+                xbox_throttlespoof "200";<br>
+                zoom_sensitivity_ratio_joystick "1.0";<br>
+                zoom_sensitivity_ratio_mouse "0.895102";
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
