@@ -372,7 +372,7 @@ main {
     width: 70%;
     min-height: 100%;
     margin: auto;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 
@@ -649,6 +649,19 @@ main {
         width: 40px;
         height: 40px;
     }
+}
+
+footer {
+    padding: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 20px;
+    font-family: Roboto-Black, Arial, sans-serif;
+    
 }
 
 
