@@ -1,7 +1,7 @@
 let nextSect = 2;
 
 function progress() {
-    let delay = 1;
+    let delay = 100;
     let i = 0;
 
     let progressFilling = setInterval(() => {
