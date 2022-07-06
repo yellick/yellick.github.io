@@ -151,24 +151,24 @@ section {
         border-radius: 50%;
     }
     30% {
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
+        width: 250px;
+        height: 250px;
+        border-radius: 125px;
     }
     50% {
-        width: 350px;
-        height: 350px;
-        border-radius: 175px;
-    }
-    70% {
-        width: 450px;
-        height: 450px;
-        border-radius: 225px;
-    }
-    90% {
         width: 500px;
         height: 500px;
         border-radius: 250px;
+    }
+    65% {
+        width: 750px;
+        height: 750px;
+        border-radius: 375px;
+    }
+    75% {
+        width: 1000px;
+        height: 1000px;
+        border-radius: 500px;
     }
     100% {
         width: 100%;

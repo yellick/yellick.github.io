@@ -126,7 +126,7 @@ function showCongratulation() {
                     $('.sect-' + nextSect).addClass('section--active');
                     nextSect++;
                 }, 500)
-            }, 8000)
+            }, 5000)
 
             clearInterval(interval);
         }
