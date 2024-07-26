@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>2048</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <main>
+        <div id="gameField">
+            <div class="gameRow">
+                <div class="cell" id="1--1"></div>
+                <div class="cell" id="1--2"></div>
+                <div class="cell" id="1--3"></div>
+                <div class="cell" id="1--4"></div>
+            </div>
+            <div class="gameRow">
+                <div class="cell" id="2--1"></div>
+                <div class="cell" id="2--2"></div>
+                <div class="cell" id="2--3"></div>
+                <div class="cell" id="2--4"></div>
+            </div>
+            <div class="gameRow">
+                <div class="cell" id="3--1"></div>
+                <div class="cell" id="3--2"></div>
+                <div class="cell" id="3--3"></div>
+                <div class="cell" id="3--4"></div>
+            </div>
+            <div class="gameRow">
+                <div class="cell" id="4--1"></div>
+                <div class="cell" id="4--2"></div>
+                <div class="cell" id="4--3"></div>
+                <div class="cell" id="4--4"></div>
+            </div>
+        </div>
+
+        <div id="instuctions">
+            <p class="discription">
+                Целью игры <b>2048</b> является создание блока со значением 2048. Для этого необходимо перемещать клетки по полю
+                <br><br>
+                2 клетки с одинаковыми значениями объединяются в одну, а их значения суммируются
+            </p>
+
+            <div id="control">
+                Для управления используются клавиши:
+
+                <div class="keys">
+                    <div class="key">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </div>
+                    <div class="key">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="key">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="key">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="buttons">
+                <button id="btnStart" class="button">Начать</button>
+
+                <button id="btnRefresh" class="button">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <script src='js/script-dist.js'></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+main > * {
+  margin: 0 25px;
+}
+
+/*-----------*/
+#gameField {
+  width: 400px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid #b8b8b8;
+  border-radius: 5px;
+}
+
+.gameRow {
+  width: 100%;
+  height: 25%;
+
+  display: flex;
+}
+
+.cell {
+  width: 25%;
+  height: 100%;
+
+  font-size: 34px;
+  font-weight: 700;
+  color: #676767;
+
+
+  border: 2px solid #b8b8b8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-----------*/
+#instuctions {
+  width: 600px;
+  
+  font-size: 18px;
+  color: #676767;
+  line-height: 1.2;
+
+  i {
+    color: #676767;
+    font-size: 26px;
+  }
+}
+
+#control {
+  margin-top: 20px;
+}
+
+.keys {
+  display: flex;
+  margin-top: 10px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+
+  margin: 0 10px;
+
+  border: 2px solid #b8b8b8;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons {
+  display: flex;
+  margin-top: 40px;
+}
+
+.button {
+  font-size: 26px;
+  padding: 10px 20px;
+  margin: 0 10px;
+
+  color: #676767;
+  font-weight: 700;
+
+  background: none;
+  border: 3px solid #b8b8b8;
+  border-radius: 20px;
+}
+
+#btnStart {
+  border-color: #7d78ff;
+  position: relative;
+  transition: .3s;
+  overflow: hidden;
+}
+
+#btnStart::before {
+  content: '';
+
+  display: block;
+
+  position: absolute;
+  top: 200%; left: -50%;
+
+  transition: .3s;
+  transform: rotate(-30deg);
+
+  background: #7d78ff;
+  width: 200%;
+  height: 300%;
+
+  z-index: -1;
+}
+
+#btnStart:hover {
+  color: #fff;
+}
+
+#btnStart:hover::before {
+  top: -40%;
+}
+
+#btnRefresh {
+  border-color: #ff7878;
+  transition: .2s;
+}
+
+#btnRefresh i {
+  transition: .2s;
+}
+
+#btnRefresh:hover {
+  background: #fbd2d2;
+  
+  i {transform: rotate(180deg)}
+}
