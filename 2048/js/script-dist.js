@@ -28,6 +28,8 @@ function start() {
 
     Move.right()
 
+    console.log(field);
+
     document.addEventListener('keydown', (e) => {
         let kCode = e.code;
     
