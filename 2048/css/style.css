@@ -139,10 +139,10 @@ main > * {
 #btnRefresh {
   border-color: #ff7878;
   transition: .2s;
-}
-
-#btnRefresh i {
-  transition: .2s;
+  
+  i {
+    transition: .2s;
+  }
 }
 
 #btnRefresh:hover {
