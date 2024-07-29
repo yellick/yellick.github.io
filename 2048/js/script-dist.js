@@ -1,3 +1,25 @@
+let row = [0, 2, 0, 2, 45, 15, 0, 42];
+console.log(row)
+
+
+let counter = 0;
+
+for (let i = 0; i < row.length; i++) {
+    if (row[i] == 0) {
+
+        row.splice(i, 1);
+        counter++; i--;
+
+    }
+}
+
+for (let i = 0; i < counter; i++) {
+    row.push(0);
+}
+
+console.log(row)
+
+/*
 class Moving {
     constructor(field) {
         this.field = field;
@@ -5,9 +27,10 @@ class Moving {
 
     right() {
         this.field.forEach((row) => {
-            row.forEach((e) => {
-                
-            })
+            console.log(row)
+            for (let i = row.length - 1; i >= 0; i--) {
+                console.log(i)
+            }
         })
     }
 }
@@ -27,8 +50,6 @@ function start() {
     field[y][x].val = num;
 
     Move.right()
-
-    console.log(field);
 
     document.addEventListener('keydown', (e) => {
         let kCode = e.code;
@@ -77,3 +98,4 @@ function createMatrix() {
 
 
 start()
+*/
